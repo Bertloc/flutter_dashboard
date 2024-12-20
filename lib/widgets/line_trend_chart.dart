@@ -2,7 +2,9 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class LineTrendChart extends StatelessWidget {
-  const LineTrendChart({Key? key}) : super(key: key);
+  final List<Map<String, dynamic>> data; // Datos dinámicos
+
+  const LineTrendChart({Key? key, required this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,38 +13,36 @@ class LineTrendChart extends StatelessWidget {
       child: LineChart(
         LineChartData(
           titlesData: FlTitlesData(
-            leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true)),
+            leftTitles: AxisTitles(
+              sideTitles: SideTitles(showTitles: true, interval: 50),
+            ),
             bottomTitles: AxisTitles(
               sideTitles: SideTitles(
                 showTitles: true,
                 getTitlesWidget: (value, meta) {
-                  const days = [
-                    "01-nov", "02-nov", "04-nov", "05-nov", "06-nov",
-                    "07-nov", "08-nov", "09-nov", "11-nov", "12-nov"
-                  ];
-                  return Text(days[value.toInt()]);
+                  if (value.toInt() < data.length) {
+                    return Text(
+                      data[value.toInt()]['Fecha'],
+                      style: const TextStyle(fontSize: 10),
+                    );
+                  }
+                  return const Text('');
                 },
               ),
             ),
           ),
           lineBarsData: [
             LineChartBarData(
-              spots: [
-                FlSpot(0, 88),
-                FlSpot(1, 80),
-                FlSpot(2, 136),
-                FlSpot(3, 254),
-                FlSpot(4, 193),
-                FlSpot(5, 91),
-                FlSpot(6, 82),
-                FlSpot(7, 94),
-                FlSpot(8, 156),
-                FlSpot(9, 20),
-              ],
+              spots: List.generate(
+                data.length,
+                (index) => FlSpot(
+                  index.toDouble(),
+                  data[index]['Entregado']?.toDouble() ?? 0.0,
+                ),
+              ),
               isCurved: true,
-              color: Colors.blueAccent,
-              barWidth: 4,
               dotData: FlDotData(show: true),
+              color: Colors.blueAccent,
             ),
           ],
         ),

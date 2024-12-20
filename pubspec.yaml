@@ -38,6 +38,9 @@ dependencies:
   excel: ^2.0.5
   file_picker: ^5.2.2
   csv: ^5.0.1
+  pdf: ^3.10.0
+  printing: ^5.10.0
+  flutter_animate: ^4.1.0
 
 dev_dependencies:
   flutter_test:
