@@ -35,6 +35,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   fl_chart: ^0.63.0
+  excel: ^2.0.5
+  file_picker: ^5.2.2
+  csv: ^5.0.1
 
 dev_dependencies:
   flutter_test:
