@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import '../services/excel_service.dart';
 
 class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({Key? key}) : super(key: key); // Asegúrate de agregar este constructor.
+  const DashboardScreen({Key? key}) : super(key: key);
 
   @override
   DashboardScreenState createState() => DashboardScreenState();
@@ -13,6 +13,7 @@ class DashboardScreen extends StatefulWidget {
 class DashboardScreenState extends State<DashboardScreen> {
   File? selectedFile;
   List<Map<String, dynamic>>? responseData;
+  bool isLoading = false; // Indicador de carga
 
   final ExcelService excelService = ExcelService();
 
@@ -31,13 +32,22 @@ class DashboardScreenState extends State<DashboardScreen> {
       return;
     }
 
+    setState(() {
+      isLoading = true; // Activa el indicador de carga
+    });
+
     try {
       final data = await excelService.uploadFile(selectedFile!);
       setState(() {
         responseData = data;
       });
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Archivo procesado con éxito.")));
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Error al subir el archivo: $e")));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Error: $e")));
+    } finally {
+      setState(() {
+        isLoading = false; // Desactiva el indicador de carga
+      });
     }
   }
 
@@ -58,11 +68,13 @@ class DashboardScreenState extends State<DashboardScreen> {
             if (selectedFile != null) Text("Archivo seleccionado: ${selectedFile!.path}"),
             SizedBox(height: 16),
             ElevatedButton(
-              onPressed: uploadFile,
+              onPressed: isLoading ? null : uploadFile, // Deshabilita el botón si está cargando
               child: Text("Subir y Procesar"),
             ),
             SizedBox(height: 16),
-            if (responseData != null)
+            if (isLoading)
+              Center(child: CircularProgressIndicator()), // Indicador de carga
+            if (responseData != null && !isLoading)
               Expanded(
                 child: ListView(
                   children: responseData!.map((item) {
