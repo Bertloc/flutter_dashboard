@@ -41,6 +41,7 @@ dependencies:
   pdf: ^3.10.0
   printing: ^5.10.0
   flutter_animate: ^4.1.0
+  intl: ^0.18.0
 
 dev_dependencies:
   flutter_test:

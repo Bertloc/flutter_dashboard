@@ -1,64 +1,85 @@
-import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/material.dart';
 
 class DailyTrendChart extends StatelessWidget {
-  final List<Map<String, dynamic>> data;
+  final Map<String, double> groupedData;
 
-  const DailyTrendChart({Key? key, required this.data}) : super(key: key);
+  const DailyTrendChart({Key? key, required this.groupedData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final barGroups = data
-        .map(
-          (row) => BarChartGroupData(
-            x: data.indexOf(row),
-            barRods: [
-              BarChartRodData(
-                toY: row['Volumen Entregado']?.toDouble() ?? 0.0,
-                width: 16,
-                gradient: const LinearGradient(
-                  colors: [Colors.blue, Colors.blueAccent],
-                ),
-              ),
-            ],
-          ),
-        )
+    final sortedDates = groupedData.keys.toList()..sort();
+    final spots = sortedDates
+        .map((date) => FlSpot(
+              _convertDateToDouble(date),
+              groupedData[date] ?? 0.0,
+            ))
         .toList();
 
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: BarChart(
-        BarChartData(
-          alignment: BarChartAlignment.spaceAround,
-          barGroups: barGroups,
-          titlesData: FlTitlesData(
-            leftTitles: AxisTitles(
-              sideTitles: SideTitles(showTitles: true),
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      elevation: 4,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            Text(
+              'Tendencia Diaria',
+              style: Theme.of(context).textTheme.titleLarge,
             ),
-            bottomTitles: AxisTitles(
-              sideTitles: SideTitles(
-                showTitles: true,
-                getTitlesWidget: (value, meta) {
-                  try {
-                    final index = value.toInt();
-                    if (index >= 0 && index < data.length) {
-                      return Text(data[index]['Fecha'] ?? '');
-                    }
-                  } catch (e) {
-                    return const Text('');
-                  }
-                  return const Text('');
-                },
+            const SizedBox(height: 16),
+            SizedBox(
+              height: 200,
+              child: LineChart(
+                LineChartData(
+                  gridData: FlGridData(show: false),
+                  titlesData: FlTitlesData(
+                    leftTitles: AxisTitles(
+                      sideTitles: SideTitles(showTitles: true),
+                    ),
+                    bottomTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        interval: 1,
+                        getTitlesWidget: (value, meta) {
+                          return SideTitleWidget(
+                            axisSide: meta.axisSide,
+                            child: Text(
+                              _convertDoubleToDate(value),
+                              style: const TextStyle(fontSize: 10),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  borderData: FlBorderData(show: true),
+                  lineBarsData: [
+                    LineChartBarData(
+                      spots: spots,
+                      isCurved: true,
+                      color: Colors.blue,
+                      dotData: FlDotData(show: false),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          borderData: FlBorderData(show: false),
-          maxY: data.isNotEmpty
-              ? (data.map((row) => row['Volumen Entregado']?.toDouble() ?? 0.0).reduce((a, b) => a > b ? a : b) + 10)
-              : 10,
-          minY: 0,
+          ],
         ),
       ),
     );
+  }
+
+  double _convertDateToDouble(String date) {
+    final parsedDate = DateTime.tryParse(date);
+    return parsedDate != null ? parsedDate.millisecondsSinceEpoch.toDouble() : 0.0;
+  }
+
+  String _convertDoubleToDate(double value) {
+    final date = DateTime.fromMillisecondsSinceEpoch(value.toInt());
+    return "${date.day}/${date.month}";
   }
 }
