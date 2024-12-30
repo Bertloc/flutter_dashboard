@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import '../services/excel_service.dart';
+import '../widgets/pie_chart_widget.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -76,13 +77,20 @@ class DashboardScreenState extends State<DashboardScreen> {
               Center(child: CircularProgressIndicator()), // Indicador de carga
             if (responseData != null && !isLoading)
               Expanded(
-                child: ListView(
-                  children: responseData!.map((item) {
-                    return ListTile(
-                      title: Text(item['Estatus Pedido']),
-                      subtitle: Text("Cantida Pedido: ${item['Cantida Pedido']}"),
-                    );
-                  }).toList(),
+                child: Column(
+                  children: [
+                    PieChartWidget(data: responseData!), // Gráfico de pastel
+                    Expanded(
+                      child: ListView(
+                        children: responseData!.map((item) {
+                          return ListTile(
+                            title: Text(item['Estatus Pedido']),
+                            subtitle: Text("Cantida Pedido: ${item['Cantida Pedido']}"),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  ],
                 ),
               ),
           ],
