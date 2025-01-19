@@ -1,123 +1,146 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
-import '../services/api_service.dart';
-import '../widgets/pie_chart_widget.dart';
-import '../widgets/line_chart_widget.dart';
-import '../widgets/bar_chart_widget.dart';
-import '../widgets/delivery_trends_chart_widget.dart';
-import '../widgets/daily_delivery_report_widget.dart';
-import '../widgets/distribution_by_center_widget.dart';
-import '../widgets/summary_table_widget.dart';
-import '../widgets/pending_orders_widget.dart';
-import '../widgets/product_category_widget.dart';
+import '../widgets/compliance_pie_chart.dart';
+import '../widgets/DailyTrendLineChart.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
 
   @override
-  DashboardScreenState createState() => DashboardScreenState();
+  _DashboardScreenState createState() => _DashboardScreenState();
 }
 
-class DashboardScreenState extends State<DashboardScreen> {
+class _DashboardScreenState extends State<DashboardScreen> {
   File? selectedFile;
-  List<Map<String, dynamic>>? pieChartData;
-  List<Map<String, dynamic>>? lineChartData;
-  List<Map<String, dynamic>>? barChartData;
-  List<Map<String, dynamic>>? deliveryTrendsData;
-  List<Map<String, dynamic>>? dailyDeliveryData;
-  List<Map<String, dynamic>>? distributionData;
-  List<Map<String, dynamic>>? summaryTableData;
-  List<Map<String, dynamic>>? pendingOrdersData;
-  List<Map<String, dynamic>>? productCategoryData;
-  final ApiService apiService = ApiService();
+  List<Map<String, dynamic>> clients = [];
+  String? selectedClientId;
+  List<Map<String, dynamic>> complianceData = [];
+  List<Map<String, dynamic>> dailyTrendData = [];
   bool isLoading = false;
+  String? errorMessage;
+
+  final Dio dio = Dio();
+  final String baseUrl = "https://backend-processing.onrender.com/api";
 
   Future<void> pickFile() async {
-    final result = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['xlsx']);
-    if (result != null) {
-      setState(() {
-        selectedFile = File(result.files.single.path!);
-      });
+    try {
+      final result = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['xlsx']);
+      if (result != null) {
+        setState(() {
+          selectedFile = File(result.files.single.path!);
+        });
+      }
+    } catch (e) {
+      setState(() => errorMessage = "Error al seleccionar archivo: $e");
     }
   }
 
-  Future<void> generateAllCharts() async {
-    if (selectedFile == null) return;
+  Future<void> uploadFile() async {
+    if (selectedFile == null) {
+      setState(() => errorMessage = "Por favor, selecciona un archivo.");
+      return;
+    }
+
+    setState(() => isLoading = true);
+
+    try {
+      final formData = FormData.fromMap({"file": await MultipartFile.fromFile(selectedFile!.path)});
+      final response = await dio.post("$baseUrl/upload", data: formData);
+      final List<dynamic> responseClients = response.data["clientes"];
+
+      if (responseClients.isEmpty) {
+        setState(() => errorMessage = "No se encontraron clientes en el archivo.");
+        return;
+      }
+
+      clients = List<Map<String, dynamic>>.from(responseClients);
+      clients.sort((a, b) => a["Nombre Solicitante"].toString().compareTo(b["Nombre Solicitante"].toString()));
+      errorMessage = null;
+    } catch (e) {
+      setState(() => errorMessage = "Error al cargar el archivo.");
+    } finally {
+      setState(() => isLoading = false);
+    }
+  }
+
+  Future<void> handleClientSelect(String? clientId) async {
+    if (clientId == null || selectedFile == null) return;
 
     setState(() {
+      selectedClientId = clientId;
       isLoading = true;
+      errorMessage = null;
     });
 
     try {
-      pieChartData = await apiService.uploadFile(selectedFile!);
-      lineChartData = await apiService.fetchDailyTrend(selectedFile!);
-      barChartData = await apiService.fetchMonthlyProductAllocation(selectedFile!);
-      deliveryTrendsData = await apiService.fetchDeliveryTrends(selectedFile!);
-      dailyDeliveryData = await apiService.fetchDailyDeliveryReport(selectedFile!);
-      distributionData = await apiService.fetchDistributionByCenter(selectedFile!);
-      summaryTableData = await apiService.fetchDailySummary(selectedFile!);
-      pendingOrdersData = await apiService.fetchPendingOrders(selectedFile!);
-      productCategoryData = await apiService.fetchProductCategorySummary(selectedFile!);
-    } catch (e) {
-      showError(e);
-    } finally {
-      setState(() {
-        isLoading = false;
+      final formData = FormData.fromMap({
+        "file": await MultipartFile.fromFile(selectedFile!.path),
+        "client_id": clientId,
       });
-    }
-  }
 
-  void showError(Object e) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("Error: $e")),
-    );
+      final responses = await Future.wait([
+        dio.post("$baseUrl/compliance-summary", data: formData),
+        dio.post("$baseUrl/api/daily-trend", data: formData),
+      ]);
+
+      complianceData = (responses[0].data as Map<String, dynamic>).entries
+          .map((entry) => {"label": entry.key, "value": entry.value})
+          .toList();
+
+      dailyTrendData = (responses[1].data as List<dynamic>)
+          .map((entry) => {"x": entry["Fecha Entrega"], "y": entry["Cantidad entrega"]})
+          .toList();
+
+    } catch (e) {
+      setState(() => errorMessage = "Error al obtener los datos del cliente.");
+    } finally {
+      setState(() => isLoading = false);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Dashboard")),
+      appBar: AppBar(title: const Text("Dashboard - Selección de Cliente")),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ElevatedButton(
               onPressed: pickFile,
               child: const Text("Seleccionar Archivo"),
             ),
             const SizedBox(height: 16),
-            if (selectedFile != null) Text("Archivo seleccionado: ${selectedFile!.path}"),
-            const SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: selectedFile == null || isLoading ? null : generateAllCharts,
-              child: isLoading
-                  ? const CircularProgressIndicator(color: Colors.white)
-                  : const Text("Generar Todas las Gráficas"),
-            ),
-            const SizedBox(height: 16),
-            Expanded(
-              child: isLoading
-                  ? const Center(child: CircularProgressIndicator())
-                  : ListView(
-                      children: [
-                        if (pieChartData != null) PieChartWidget(data: pieChartData!),
-                        if (lineChartData != null) LineChartWidget(data: lineChartData!),
-                        if (barChartData != null) BarChartWidget(data: barChartData!),
-                        if (deliveryTrendsData != null)
-                          DeliveryTrendsChartWidget(data: deliveryTrendsData!),
-                        if (dailyDeliveryData != null)
-                          DailyDeliveryReportWidget(data: dailyDeliveryData!),
-                        if (distributionData != null)
-                          DistributionByCenterWidget(data: distributionData!),
-                        if (summaryTableData != null) SummaryTableWidget(data: summaryTableData!),
-                        if (pendingOrdersData != null) PendingOrdersWidget(data: pendingOrdersData!),
-                        if (productCategoryData != null)
-                          ProductCategoryWidget(data: productCategoryData!),
-                      ],
-                    ),
-            ),
+            if (selectedFile != null)
+              ElevatedButton(
+                onPressed: uploadFile,
+                child: const Text("Subir Archivo"),
+              ),
+            if (isLoading) const CircularProgressIndicator(),
+            if (errorMessage != null)
+              Text(
+                errorMessage!,
+                style: const TextStyle(color: Colors.red),
+              ),
+            if (clients.isNotEmpty)
+              DropdownButton<String>(
+                value: selectedClientId,
+                hint: const Text("Selecciona un cliente"),
+                items: clients
+                    .map((client) => DropdownMenuItem(
+                          value: client["Solicitante"].toString(),
+                          child: Text(client["Nombre Solicitante"]),
+                        ))
+                    .toList(),
+                onChanged: (value) => handleClientSelect(value!),
+              ),
+            if (selectedClientId != null) ...[
+              const SizedBox(height: 16),
+              CompliancePieChart(data: complianceData),
+              DailyTrendLineChart(data: dailyTrendData),
+            ],
           ],
         ),
       ),

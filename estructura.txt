@@ -1,0 +1,2073 @@
+Listado de rutas de carpetas
+El número de serie del volumen es E6DA-FBF1
+C:.
+¦   .flutter-plugins
+¦   .flutter-plugins-dependencies
+¦   .gitignore
+¦   .metadata
+¦   analysis_options.yaml
+¦   appvdos.iml
+¦   estructura.txt
+¦   pubspec.lock
+¦   pubspec.yaml
+¦   README.md
+¦   
++---.dart_tool
+¦   ¦   package_config.json
+¦   ¦   package_config_subset
+¦   ¦   version
+¦   ¦   
+¦   +---dartpad
+¦   ¦       web_plugin_registrant.dart
+¦   ¦       
+¦   +---extension_discovery
+¦   ¦       vs_code.json
+¦   ¦       
+¦   +---flutter_build
+¦       +---7110b0a6d20f05bf163faa4eb541ea0f
+¦               .filecache
+¦               app.dill
+¦               debug_android_application.stamp
+¦               flutter_assets.d
+¦               gen_dart_plugin_registrant.stamp
+¦               gen_localizations.stamp
+¦               kernel_snapshot.stamp
+¦               kernel_snapshot_native_assets.stamp
+¦               kernel_snapshot_program.d
+¦               kernel_snapshot_program.stamp
+¦               native_assets.d
+¦               native_assets.dill
+¦               native_assets.stamp
+¦               native_assets.yaml
+¦               outputs.json
+¦               program.dill
+¦               
++---.idea
+¦   ¦   modules.xml
+¦   ¦   workspace.xml
+¦   ¦   
+¦   +---libraries
+¦   ¦       Dart_SDK.xml
+¦   ¦       KotlinJavaRuntime.xml
+¦   ¦       
+¦   +---runConfigurations
+¦           main_dart.xml
+¦           
++---android
+¦   ¦   .gitignore
+¦   ¦   appvdos_android.iml
+¦   ¦   build.gradle
+¦   ¦   gradle.properties
+¦   ¦   gradlew
+¦   ¦   gradlew.bat
+¦   ¦   local.properties
+¦   ¦   settings.gradle
+¦   ¦   
+¦   +---.gradle
+¦   ¦   ¦   file-system.probe
+¦   ¦   ¦   
+¦   ¦   +---8.3
+¦   ¦   ¦   ¦   gc.properties
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---checksums
+¦   ¦   ¦   ¦       checksums.lock
+¦   ¦   ¦   ¦       md5-checksums.bin
+¦   ¦   ¦   ¦       sha1-checksums.bin
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---dependencies-accessors
+¦   ¦   ¦   ¦       dependencies-accessors.lock
+¦   ¦   ¦   ¦       gc.properties
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---executionHistory
+¦   ¦   ¦   ¦       executionHistory.bin
+¦   ¦   ¦   ¦       executionHistory.lock
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---fileChanges
+¦   ¦   ¦   ¦       last-build.bin
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---fileHashes
+¦   ¦   ¦   ¦       fileHashes.bin
+¦   ¦   ¦   ¦       fileHashes.lock
+¦   ¦   ¦   ¦       resourceHashesCache.bin
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---vcsMetadata
+¦   ¦   +---buildOutputCleanup
+¦   ¦   ¦       buildOutputCleanup.lock
+¦   ¦   ¦       cache.properties
+¦   ¦   ¦       outputFiles.bin
+¦   ¦   ¦       
+¦   ¦   +---kotlin
+¦   ¦   ¦   +---errors
+¦   ¦   ¦   ¦       errors-1734548467366.log
+¦   ¦   ¦   ¦       errors-1734629670775.log
+¦   ¦   ¦   ¦       errors-1734663527272.log
+¦   ¦   ¦   ¦       errors-1734679910594.log
+¦   ¦   ¦   ¦       errors-1734685663341.log
+¦   ¦   ¦   ¦       errors-1734713957325.log
+¦   ¦   ¦   ¦       errors-1734717083715.log
+¦   ¦   ¦   ¦       errors-1734737352944.log
+¦   ¦   ¦   ¦       errors-1734743362604.log
+¦   ¦   ¦   ¦       errors-1735450176088.log
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---sessions
+¦   ¦   +---vcs-1
+¦   ¦           gc.properties
+¦   ¦           
+¦   +---app
+¦   ¦   ¦   build.gradle
+¦   ¦   ¦   
+¦   ¦   +---src
+¦   ¦       +---debug
+¦   ¦       ¦       AndroidManifest.xml
+¦   ¦       ¦       
+¦   ¦       +---main
+¦   ¦       ¦   ¦   AndroidManifest.xml
+¦   ¦       ¦   ¦   
+¦   ¦       ¦   +---java
+¦   ¦       ¦   ¦   +---io
+¦   ¦       ¦   ¦       +---flutter
+¦   ¦       ¦   ¦           +---plugins
+¦   ¦       ¦   ¦                   GeneratedPluginRegistrant.java
+¦   ¦       ¦   ¦                   
+¦   ¦       ¦   +---kotlin
+¦   ¦       ¦   ¦   +---com
+¦   ¦       ¦   ¦       +---example
+¦   ¦       ¦   ¦           +---appvdos
+¦   ¦       ¦   ¦                   MainActivity.kt
+¦   ¦       ¦   ¦                   
+¦   ¦       ¦   +---res
+¦   ¦       ¦       +---drawable
+¦   ¦       ¦       ¦       launch_background.xml
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---drawable-v21
+¦   ¦       ¦       ¦       launch_background.xml
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---mipmap-hdpi
+¦   ¦       ¦       ¦       ic_launcher.png
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---mipmap-mdpi
+¦   ¦       ¦       ¦       ic_launcher.png
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---mipmap-xhdpi
+¦   ¦       ¦       ¦       ic_launcher.png
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---mipmap-xxhdpi
+¦   ¦       ¦       ¦       ic_launcher.png
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---mipmap-xxxhdpi
+¦   ¦       ¦       ¦       ic_launcher.png
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---values
+¦   ¦       ¦       ¦       styles.xml
+¦   ¦       ¦       ¦       
+¦   ¦       ¦       +---values-night
+¦   ¦       ¦               styles.xml
+¦   ¦       ¦               
+¦   ¦       +---profile
+¦   ¦               AndroidManifest.xml
+¦   ¦               
+¦   +---gradle
+¦       +---wrapper
+¦               gradle-wrapper.jar
+¦               gradle-wrapper.properties
+¦               
++---build
+¦   ¦   cache.dill.track.dill
+¦   ¦   
+¦   +---573bc76cefe2f5376369f636ab3a22e0
+¦   ¦       gen_dart_plugin_registrant.stamp
+¦   ¦       gen_localizations.stamp
+¦   ¦       _composite.stamp
+¦   ¦       
+¦   +---app
+¦   ¦   ¦   20241228_16568387163641584423.compiler.options
+¦   ¦   ¦   
+¦   ¦   +---generated
+¦   ¦   ¦   +---ap_generated_sources
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---res
+¦   ¦   ¦       +---pngs
+¦   ¦   ¦       ¦   +---debug
+¦   ¦   ¦       +---resValues
+¦   ¦   ¦           +---debug
+¦   ¦   +---intermediates
+¦   ¦   ¦   +---aar_metadata_check
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---annotation_processor_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           annotationProcessors.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---apk_ide_redirect_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           redirect.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---app_metadata
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           app-metadata.properties
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---assets
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---flutter_assets
+¦   ¦   ¦   ¦           ¦   AssetManifest.bin
+¦   ¦   ¦   ¦           ¦   AssetManifest.json
+¦   ¦   ¦   ¦           ¦   FontManifest.json
+¦   ¦   ¦   ¦           ¦   isolate_snapshot_data
+¦   ¦   ¦   ¦           ¦   kernel_blob.bin
+¦   ¦   ¦   ¦           ¦   NOTICES.Z
+¦   ¦   ¦   ¦           ¦   vm_snapshot_data
+¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦           +---fonts
+¦   ¦   ¦   ¦           ¦       MaterialIcons-Regular.otf
+¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦           +---packages
+¦   ¦   ¦   ¦           ¦   +---cupertino_icons
+¦   ¦   ¦   ¦           ¦       +---assets
+¦   ¦   ¦   ¦           ¦               CupertinoIcons.ttf
+¦   ¦   ¦   ¦           ¦               
+¦   ¦   ¦   ¦           +---shaders
+¦   ¦   ¦   ¦                   ink_sparkle.frag
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---compatible_screen_manifest
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           output-metadata.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compile_and_runtime_not_namespaced_r_class_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compressed_assets
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦           +---assets
+¦   ¦   ¦   ¦               +---flutter_assets
+¦   ¦   ¦   ¦                   ¦   AssetManifest.bin.jar
+¦   ¦   ¦   ¦                   ¦   AssetManifest.json.jar
+¦   ¦   ¦   ¦                   ¦   FontManifest.json.jar
+¦   ¦   ¦   ¦                   ¦   isolate_snapshot_data.jar
+¦   ¦   ¦   ¦                   ¦   kernel_blob.bin.jar
+¦   ¦   ¦   ¦                   ¦   NOTICES.Z.jar
+¦   ¦   ¦   ¦                   ¦   vm_snapshot_data.jar
+¦   ¦   ¦   ¦                   ¦   
+¦   ¦   ¦   ¦                   +---fonts
+¦   ¦   ¦   ¦                   ¦       MaterialIcons-Regular.otf.jar
+¦   ¦   ¦   ¦                   ¦       
+¦   ¦   ¦   ¦                   +---packages
+¦   ¦   ¦   ¦                   ¦   +---cupertino_icons
+¦   ¦   ¦   ¦                   ¦       +---assets
+¦   ¦   ¦   ¦                   ¦               CupertinoIcons.ttf.jar
+¦   ¦   ¦   ¦                   ¦               
+¦   ¦   ¦   ¦                   +---shaders
+¦   ¦   ¦   ¦                           ink_sparkle.frag.jar
+¦   ¦   ¦   ¦                           
+¦   ¦   ¦   +---data_binding_layout_info_type_merge
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---data_binding_layout_info_type_package
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---desugar_graph
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦           +---currentProject
+¦   ¦   ¦   ¦           ¦   +---dirs_bucket_0
+¦   ¦   ¦   ¦           ¦   ¦       graph.bin
+¦   ¦   ¦   ¦           ¦   ¦       
+¦   ¦   ¦   ¦           ¦   +---jar_7f336f79f0cfb2d65d4cef868eb1e444ef1e410469974666f377e2c7a8befc24_bucket_0
+¦   ¦   ¦   ¦           ¦           graph.bin
+¦   ¦   ¦   ¦           ¦           
+¦   ¦   ¦   ¦           +---externalLibs
+¦   ¦   ¦   ¦           +---mixedScopes
+¦   ¦   ¦   ¦           +---otherProjects
+¦   ¦   ¦   ¦               +---jar_43269cbf8adcc683421074d222c91c35cd84179d2086c029112f727d0ebbb68c_bucket_0
+¦   ¦   ¦   ¦               ¦       graph.bin
+¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦               +---jar_5d90c6fbddd98a5a45abdb2d6d18cbcb0efde5659535c00082809ba723b616b9_bucket_0
+¦   ¦   ¦   ¦               ¦       graph.bin
+¦   ¦   ¦   ¦               ¦       
+¦   ¦   ¦   ¦               +---jar_62b4c799af67daddd49566dedf91c1487e9c74265a5d784742a8bd51d8361486_bucket_0
+¦   ¦   ¦   ¦                       graph.bin
+¦   ¦   ¦   ¦                       
+¦   ¦   ¦   +---dex
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---mergeExtDexDebug
+¦   ¦   ¦   ¦       ¦       classes.dex
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---mergeLibDexDebug
+¦   ¦   ¦   ¦       ¦   +---0
+¦   ¦   ¦   ¦       ¦   ¦       classes.dex
+¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦       ¦   +---1
+¦   ¦   ¦   ¦       ¦   +---10
+¦   ¦   ¦   ¦       ¦   +---11
+¦   ¦   ¦   ¦       ¦   +---12
+¦   ¦   ¦   ¦       ¦   +---13
+¦   ¦   ¦   ¦       ¦   +---14
+¦   ¦   ¦   ¦       ¦   +---15
+¦   ¦   ¦   ¦       ¦   +---2
+¦   ¦   ¦   ¦       ¦   +---3
+¦   ¦   ¦   ¦       ¦   +---4
+¦   ¦   ¦   ¦       ¦   +---5
+¦   ¦   ¦   ¦       ¦   +---6
+¦   ¦   ¦   ¦       ¦   +---7
+¦   ¦   ¦   ¦       ¦   +---8
+¦   ¦   ¦   ¦       ¦   +---9
+¦   ¦   ¦   ¦       +---mergeProjectDexDebug
+¦   ¦   ¦   ¦           +---0
+¦   ¦   ¦   ¦           ¦       classes.dex
+¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦           +---1
+¦   ¦   ¦   ¦           ¦       classes.dex
+¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦           +---10
+¦   ¦   ¦   ¦           +---11
+¦   ¦   ¦   ¦           ¦       classes.dex
+¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦           +---12
+¦   ¦   ¦   ¦           +---13
+¦   ¦   ¦   ¦           +---14
+¦   ¦   ¦   ¦           +---15
+¦   ¦   ¦   ¦           +---2
+¦   ¦   ¦   ¦           +---3
+¦   ¦   ¦   ¦           +---4
+¦   ¦   ¦   ¦           +---5
+¦   ¦   ¦   ¦           +---6
+¦   ¦   ¦   ¦           +---7
+¦   ¦   ¦   ¦           +---8
+¦   ¦   ¦   ¦           +---9
+¦   ¦   ¦   +---dex_archive_input_jar_hashes
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           out
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---dex_number_of_buckets_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           out
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---duplicate_classes_check
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---external_file_lib_dex_archives
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---external_libs_dex_archive
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---external_libs_dex_archive_with_artifact_transforms
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---flutter
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       ¦   .last_build_id
+¦   ¦   ¦   ¦       ¦   flutter_build.d
+¦   ¦   ¦   ¦       ¦   libs.jar
+¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦       +---flutter_assets
+¦   ¦   ¦   ¦           ¦   AssetManifest.bin
+¦   ¦   ¦   ¦           ¦   AssetManifest.json
+¦   ¦   ¦   ¦           ¦   FontManifest.json
+¦   ¦   ¦   ¦           ¦   isolate_snapshot_data
+¦   ¦   ¦   ¦           ¦   kernel_blob.bin
+¦   ¦   ¦   ¦           ¦   NOTICES.Z
+¦   ¦   ¦   ¦           ¦   vm_snapshot_data
+¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦           +---fonts
+¦   ¦   ¦   ¦           ¦       MaterialIcons-Regular.otf
+¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦           +---packages
+¦   ¦   ¦   ¦           ¦   +---cupertino_icons
+¦   ¦   ¦   ¦           ¦       +---assets
+¦   ¦   ¦   ¦           ¦               CupertinoIcons.ttf
+¦   ¦   ¦   ¦           ¦               
+¦   ¦   ¦   ¦           +---shaders
+¦   ¦   ¦   ¦                   ink_sparkle.frag
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---incremental
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦   ¦   +---mergeDebugResources
+¦   ¦   ¦   ¦   ¦   ¦   ¦   compile-file-map.properties
+¦   ¦   ¦   ¦   ¦   ¦   ¦   merger.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   ¦   +---merged.dir
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-af
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-af.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-am
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-am.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ar
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ar.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-as
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-as.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-az
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-az.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-b+sr+Latn
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-b+sr+Latn.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-be
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-be.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-bg
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-bg.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-bn
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-bn.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-bs
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-bs.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ca
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ca.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-cs
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-cs.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-da
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-da.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-de
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-de.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-el
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-el.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-en-rAU
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-en-rAU.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-en-rCA
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-en-rCA.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-en-rGB
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-en-rGB.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-en-rIN
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-en-rIN.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-en-rXC
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-en-rXC.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-es
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-es.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-es-rUS
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-es-rUS.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-et
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-et.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-eu
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-eu.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-fa
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-fa.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-fi
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-fi.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-fr
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-fr.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-fr-rCA
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-fr-rCA.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-gl
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-gl.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-gu
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-gu.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-hi
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-hi.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-hr
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-hr.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-hu
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-hu.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-hy
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-hy.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-in
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-in.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-is
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-is.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-it
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-it.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-iw
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-iw.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ja
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ja.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ka
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ka.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-kk
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-kk.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-km
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-km.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-kn
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-kn.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ko
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ko.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ky
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ky.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-lo
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-lo.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-lt
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-lt.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-lv
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-lv.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-mk
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-mk.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ml.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-mn
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-mn.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-mr
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-mr.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ms
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ms.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-my
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-my.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-nb
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-nb.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ne
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ne.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-night-v8
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-night-v8.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-nl
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-nl.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-or
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-or.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-pa
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-pa.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-pl
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-pl.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-pt
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-pt.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-pt-rBR
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-pt-rBR.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-pt-rPT
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-pt-rPT.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ro
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ro.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ru
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ru.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-si
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-si.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-sk
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-sk.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-sl
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-sl.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-sq
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-sq.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-sr
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-sr.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-sv
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-sv.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-sw
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-sw.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ta
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ta.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-te
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-te.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-th
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-th.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-tl
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-tl.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-tr
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-tr.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-uk
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-uk.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-ur
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-ur.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-uz
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-uz.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-v21
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-v21.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-vi
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-vi.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-zh-rCN
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-zh-rCN.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-zh-rHK
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-zh-rHK.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-zh-rTW
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       values-zh-rTW.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   ¦   ¦   ¦   +---values-zu
+¦   ¦   ¦   ¦   ¦   ¦   ¦           values-zu.xml
+¦   ¦   ¦   ¦   ¦   ¦   ¦           
+¦   ¦   ¦   ¦   ¦   ¦   +---stripped.dir
+¦   ¦   ¦   ¦   ¦   +---packageDebugResources
+¦   ¦   ¦   ¦   ¦       ¦   compile-file-map.properties
+¦   ¦   ¦   ¦   ¦       ¦   merger.xml
+¦   ¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦   ¦       +---merged.dir
+¦   ¦   ¦   ¦   ¦       ¦   +---values
+¦   ¦   ¦   ¦   ¦       ¦   ¦       values.xml
+¦   ¦   ¦   ¦   ¦       ¦   ¦       
+¦   ¦   ¦   ¦   ¦       ¦   +---values-night-v8
+¦   ¦   ¦   ¦   ¦       ¦           values-night-v8.xml
+¦   ¦   ¦   ¦   ¦       ¦           
+¦   ¦   ¦   ¦   ¦       +---stripped.dir
+¦   ¦   ¦   ¦   +---debug-mergeJavaRes
+¦   ¦   ¦   ¦   ¦   ¦   merge-state
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---zip-cache
+¦   ¦   ¦   ¦   ¦           +4ok5I5Y1qdmh6ckQvdTPbK4274=
+¦   ¦   ¦   ¦   ¦           +J7ysnxRKU9ZZ3aremqWofgwuKs=
+¦   ¦   ¦   ¦   ¦           +z7YicQlJ4ynfGDe0d1if6qmf+A=
+¦   ¦   ¦   ¦   ¦           0V1GgiXVf61HZg12_3a3QF1PGXk=
+¦   ¦   ¦   ¦   ¦           0XZk8okkLzDsMRop6l7g_vh09Kk=
+¦   ¦   ¦   ¦   ¦           19z78ZKmxlUgaxu3Qbc692Jzi4s=
+¦   ¦   ¦   ¦   ¦           3Z94o9YHXyv8Fvn1s2i1Q9JxLyQ=
+¦   ¦   ¦   ¦   ¦           8c0y8YctBuvIrzXSHWc65jxfs4U=
+¦   ¦   ¦   ¦   ¦           8tlJTNkSMqA8sk_YrDXcg4Njasg=
+¦   ¦   ¦   ¦   ¦           9cXMz9r2mnFDz+5WX01e9b9PZEI=
+¦   ¦   ¦   ¦   ¦           9KxWQzsaCDY4xeT9_BsQZwACWQs=
+¦   ¦   ¦   ¦   ¦           acjbrLlvPXGhnduQXE9denApKDs=
+¦   ¦   ¦   ¦   ¦           bIVsiSWrQs5m_PVpXa3ccbxoRgs=
+¦   ¦   ¦   ¦   ¦           C+WhtK0LMTCa9cSi3dmaSnJ2Vq8=
+¦   ¦   ¦   ¦   ¦           CMpTwKGsHtslCQ_jfdvr1SEENQY=
+¦   ¦   ¦   ¦   ¦           CT1FD9BuiAoZIUw0cz8fX5YviOc=
+¦   ¦   ¦   ¦   ¦           doOxQduMvbGZJvsTTP0I2_TzVLM=
+¦   ¦   ¦   ¦   ¦           f9IJ0028JXepJRvukfjxCiPQUPw=
+¦   ¦   ¦   ¦   ¦           H6qeV7AwK5datvlvwYxiAYxWYME=
+¦   ¦   ¦   ¦   ¦           jCxPN12MHTxQ10wTFhSy3mp0xeA=
+¦   ¦   ¦   ¦   ¦           JFKp35e+NOB2LXJqHiebo5FFfdQ=
+¦   ¦   ¦   ¦   ¦           KC7hzBA_dM8V3cnTx_uN+ERseS0=
+¦   ¦   ¦   ¦   ¦           lalPO+BrFZnpw_vHkh39YrqkxsI=
+¦   ¦   ¦   ¦   ¦           N6MMLySAUpv9BjlQe0oUYZU3wUo=
+¦   ¦   ¦   ¦   ¦           nd80M31tU6y0DWjDpYQWu7jM8A8=
+¦   ¦   ¦   ¦   ¦           NJU9L_kgyuNn3hfPsaokBR_Ydzc=
+¦   ¦   ¦   ¦   ¦           p775wBgksI2BvxzNu23NZZ5uMqo=
+¦   ¦   ¦   ¦   ¦           pcRKvyqFbBSmPkRt2jA3scwv_cA=
+¦   ¦   ¦   ¦   ¦           Pi0kKJZR1BBxBzLEWuqpcBeQBJ4=
+¦   ¦   ¦   ¦   ¦           pJXZYGdJaAFkk2N2JrOMZiMLzHc=
+¦   ¦   ¦   ¦   ¦           Qmz2Rze5AHDm3aA0Cc_SpTK26D4=
+¦   ¦   ¦   ¦   ¦           RS4X+R2taRKy7_i96qFFB6dnvpo=
+¦   ¦   ¦   ¦   ¦           S8zTU_B3AUQm7Pw+o6TkICywk7c=
+¦   ¦   ¦   ¦   ¦           tijYZn55cBiXvNRzxPQ2iGsMni8=
+¦   ¦   ¦   ¦   ¦           uNGKVuixUAIveZY5wWOyazIG3HE=
+¦   ¦   ¦   ¦   ¦           UTC5fS9MtzbFvle4x3WUTDy3+M0=
+¦   ¦   ¦   ¦   ¦           vLqzD79eeJ1TP5o93agxbepJHd4=
+¦   ¦   ¦   ¦   ¦           WoJZUd_PGrJmsmJq3hJDuHRZVo0=
+¦   ¦   ¦   ¦   ¦           Y9VUj61gQCqIgkNY81nrDhEo0Fs=
+¦   ¦   ¦   ¦   ¦           z8ueJmS5GyRy6RV0H0z5FL2Y7BI=
+¦   ¦   ¦   ¦   ¦           _bXOD7K08+f3OXBkTrL5dIUA6kg=
+¦   ¦   ¦   ¦   ¦           _Pzky7YurcyK9zH9z7mhgxuzsxo=
+¦   ¦   ¦   ¦   ¦           
+¦   ¦   ¦   ¦   +---mergeDebugAssets
+¦   ¦   ¦   ¦   ¦       merger.xml
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---mergeDebugJniLibFolders
+¦   ¦   ¦   ¦   ¦       merger.xml
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---mergeDebugShaders
+¦   ¦   ¦   ¦   ¦       merger.xml
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---packageDebug
+¦   ¦   ¦   ¦       +---tmp
+¦   ¦   ¦   ¦           +---debug
+¦   ¦   ¦   ¦               ¦   dex-renamer-state.txt
+¦   ¦   ¦   ¦               ¦   
+¦   ¦   ¦   ¦               +---zip-cache
+¦   ¦   ¦   ¦                       androidResources
+¦   ¦   ¦   ¦                       javaResources0
+¦   ¦   ¦   ¦                       
+¦   ¦   ¦   +---javac
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---classes
+¦   ¦   ¦   ¦           +---io
+¦   ¦   ¦   ¦               +---flutter
+¦   ¦   ¦   ¦                   +---plugins
+¦   ¦   ¦   ¦                           GeneratedPluginRegistrant.class
+¦   ¦   ¦   ¦                           
+¦   ¦   ¦   +---java_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦           +---com
+¦   ¦   ¦   ¦           ¦   +---example
+¦   ¦   ¦   ¦           ¦       +---appvdos
+¦   ¦   ¦   ¦           +---META-INF
+¦   ¦   ¦   ¦                   app_debug.kotlin_module
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---local_only_symbol_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R-def.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---manifest_merge_blame_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           manifest-merger-blame-debug-report.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_java_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           base.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_jni_libs
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---merged_manifest
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           AndroidManifest.xml
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_manifests
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           AndroidManifest.xml
+¦   ¦   ¦   ¦           output-metadata.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_native_libs
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦           +---lib
+¦   ¦   ¦   ¦               +---arm64-v8a
+¦   ¦   ¦   ¦                       libflutter.so
+¦   ¦   ¦   ¦                       libVkLayer_khronos_validation.so
+¦   ¦   ¦   ¦                       
+¦   ¦   ¦   +---merged_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           drawable-v21_launch_background.xml.flat
+¦   ¦   ¦   ¦           mipmap-hdpi_ic_launcher.png.flat
+¦   ¦   ¦   ¦           mipmap-mdpi_ic_launcher.png.flat
+¦   ¦   ¦   ¦           mipmap-xhdpi_ic_launcher.png.flat
+¦   ¦   ¦   ¦           mipmap-xxhdpi_ic_launcher.png.flat
+¦   ¦   ¦   ¦           mipmap-xxxhdpi_ic_launcher.png.flat
+¦   ¦   ¦   ¦           values-af_values-af.arsc.flat
+¦   ¦   ¦   ¦           values-am_values-am.arsc.flat
+¦   ¦   ¦   ¦           values-ar_values-ar.arsc.flat
+¦   ¦   ¦   ¦           values-as_values-as.arsc.flat
+¦   ¦   ¦   ¦           values-az_values-az.arsc.flat
+¦   ¦   ¦   ¦           values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+¦   ¦   ¦   ¦           values-be_values-be.arsc.flat
+¦   ¦   ¦   ¦           values-bg_values-bg.arsc.flat
+¦   ¦   ¦   ¦           values-bn_values-bn.arsc.flat
+¦   ¦   ¦   ¦           values-bs_values-bs.arsc.flat
+¦   ¦   ¦   ¦           values-ca_values-ca.arsc.flat
+¦   ¦   ¦   ¦           values-cs_values-cs.arsc.flat
+¦   ¦   ¦   ¦           values-da_values-da.arsc.flat
+¦   ¦   ¦   ¦           values-de_values-de.arsc.flat
+¦   ¦   ¦   ¦           values-el_values-el.arsc.flat
+¦   ¦   ¦   ¦           values-en-rAU_values-en-rAU.arsc.flat
+¦   ¦   ¦   ¦           values-en-rCA_values-en-rCA.arsc.flat
+¦   ¦   ¦   ¦           values-en-rGB_values-en-rGB.arsc.flat
+¦   ¦   ¦   ¦           values-en-rIN_values-en-rIN.arsc.flat
+¦   ¦   ¦   ¦           values-en-rXC_values-en-rXC.arsc.flat
+¦   ¦   ¦   ¦           values-es-rUS_values-es-rUS.arsc.flat
+¦   ¦   ¦   ¦           values-es_values-es.arsc.flat
+¦   ¦   ¦   ¦           values-et_values-et.arsc.flat
+¦   ¦   ¦   ¦           values-eu_values-eu.arsc.flat
+¦   ¦   ¦   ¦           values-fa_values-fa.arsc.flat
+¦   ¦   ¦   ¦           values-fi_values-fi.arsc.flat
+¦   ¦   ¦   ¦           values-fr-rCA_values-fr-rCA.arsc.flat
+¦   ¦   ¦   ¦           values-fr_values-fr.arsc.flat
+¦   ¦   ¦   ¦           values-gl_values-gl.arsc.flat
+¦   ¦   ¦   ¦           values-gu_values-gu.arsc.flat
+¦   ¦   ¦   ¦           values-hi_values-hi.arsc.flat
+¦   ¦   ¦   ¦           values-hr_values-hr.arsc.flat
+¦   ¦   ¦   ¦           values-hu_values-hu.arsc.flat
+¦   ¦   ¦   ¦           values-hy_values-hy.arsc.flat
+¦   ¦   ¦   ¦           values-in_values-in.arsc.flat
+¦   ¦   ¦   ¦           values-is_values-is.arsc.flat
+¦   ¦   ¦   ¦           values-it_values-it.arsc.flat
+¦   ¦   ¦   ¦           values-iw_values-iw.arsc.flat
+¦   ¦   ¦   ¦           values-ja_values-ja.arsc.flat
+¦   ¦   ¦   ¦           values-ka_values-ka.arsc.flat
+¦   ¦   ¦   ¦           values-kk_values-kk.arsc.flat
+¦   ¦   ¦   ¦           values-km_values-km.arsc.flat
+¦   ¦   ¦   ¦           values-kn_values-kn.arsc.flat
+¦   ¦   ¦   ¦           values-ko_values-ko.arsc.flat
+¦   ¦   ¦   ¦           values-ky_values-ky.arsc.flat
+¦   ¦   ¦   ¦           values-lo_values-lo.arsc.flat
+¦   ¦   ¦   ¦           values-lt_values-lt.arsc.flat
+¦   ¦   ¦   ¦           values-lv_values-lv.arsc.flat
+¦   ¦   ¦   ¦           values-mk_values-mk.arsc.flat
+¦   ¦   ¦   ¦           values-ml_values-ml.arsc.flat
+¦   ¦   ¦   ¦           values-mn_values-mn.arsc.flat
+¦   ¦   ¦   ¦           values-mr_values-mr.arsc.flat
+¦   ¦   ¦   ¦           values-ms_values-ms.arsc.flat
+¦   ¦   ¦   ¦           values-my_values-my.arsc.flat
+¦   ¦   ¦   ¦           values-nb_values-nb.arsc.flat
+¦   ¦   ¦   ¦           values-ne_values-ne.arsc.flat
+¦   ¦   ¦   ¦           values-night-v8_values-night-v8.arsc.flat
+¦   ¦   ¦   ¦           values-nl_values-nl.arsc.flat
+¦   ¦   ¦   ¦           values-or_values-or.arsc.flat
+¦   ¦   ¦   ¦           values-pa_values-pa.arsc.flat
+¦   ¦   ¦   ¦           values-pl_values-pl.arsc.flat
+¦   ¦   ¦   ¦           values-pt-rBR_values-pt-rBR.arsc.flat
+¦   ¦   ¦   ¦           values-pt-rPT_values-pt-rPT.arsc.flat
+¦   ¦   ¦   ¦           values-pt_values-pt.arsc.flat
+¦   ¦   ¦   ¦           values-ro_values-ro.arsc.flat
+¦   ¦   ¦   ¦           values-ru_values-ru.arsc.flat
+¦   ¦   ¦   ¦           values-si_values-si.arsc.flat
+¦   ¦   ¦   ¦           values-sk_values-sk.arsc.flat
+¦   ¦   ¦   ¦           values-sl_values-sl.arsc.flat
+¦   ¦   ¦   ¦           values-sq_values-sq.arsc.flat
+¦   ¦   ¦   ¦           values-sr_values-sr.arsc.flat
+¦   ¦   ¦   ¦           values-sv_values-sv.arsc.flat
+¦   ¦   ¦   ¦           values-sw_values-sw.arsc.flat
+¦   ¦   ¦   ¦           values-ta_values-ta.arsc.flat
+¦   ¦   ¦   ¦           values-te_values-te.arsc.flat
+¦   ¦   ¦   ¦           values-th_values-th.arsc.flat
+¦   ¦   ¦   ¦           values-tl_values-tl.arsc.flat
+¦   ¦   ¦   ¦           values-tr_values-tr.arsc.flat
+¦   ¦   ¦   ¦           values-uk_values-uk.arsc.flat
+¦   ¦   ¦   ¦           values-ur_values-ur.arsc.flat
+¦   ¦   ¦   ¦           values-uz_values-uz.arsc.flat
+¦   ¦   ¦   ¦           values-v21_values-v21.arsc.flat
+¦   ¦   ¦   ¦           values-vi_values-vi.arsc.flat
+¦   ¦   ¦   ¦           values-zh-rCN_values-zh-rCN.arsc.flat
+¦   ¦   ¦   ¦           values-zh-rHK_values-zh-rHK.arsc.flat
+¦   ¦   ¦   ¦           values-zh-rTW_values-zh-rTW.arsc.flat
+¦   ¦   ¦   ¦           values-zu_values-zu.arsc.flat
+¦   ¦   ¦   ¦           values_values.arsc.flat
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_res_blame_folder
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦           +---multi-v2
+¦   ¦   ¦   ¦           ¦       debug.json
+¦   ¦   ¦   ¦           ¦       values-af.json
+¦   ¦   ¦   ¦           ¦       values-am.json
+¦   ¦   ¦   ¦           ¦       values-ar.json
+¦   ¦   ¦   ¦           ¦       values-as.json
+¦   ¦   ¦   ¦           ¦       values-az.json
+¦   ¦   ¦   ¦           ¦       values-b+sr+Latn.json
+¦   ¦   ¦   ¦           ¦       values-be.json
+¦   ¦   ¦   ¦           ¦       values-bg.json
+¦   ¦   ¦   ¦           ¦       values-bn.json
+¦   ¦   ¦   ¦           ¦       values-bs.json
+¦   ¦   ¦   ¦           ¦       values-ca.json
+¦   ¦   ¦   ¦           ¦       values-cs.json
+¦   ¦   ¦   ¦           ¦       values-da.json
+¦   ¦   ¦   ¦           ¦       values-de.json
+¦   ¦   ¦   ¦           ¦       values-el.json
+¦   ¦   ¦   ¦           ¦       values-en-rAU.json
+¦   ¦   ¦   ¦           ¦       values-en-rCA.json
+¦   ¦   ¦   ¦           ¦       values-en-rGB.json
+¦   ¦   ¦   ¦           ¦       values-en-rIN.json
+¦   ¦   ¦   ¦           ¦       values-en-rXC.json
+¦   ¦   ¦   ¦           ¦       values-es-rUS.json
+¦   ¦   ¦   ¦           ¦       values-es.json
+¦   ¦   ¦   ¦           ¦       values-et.json
+¦   ¦   ¦   ¦           ¦       values-eu.json
+¦   ¦   ¦   ¦           ¦       values-fa.json
+¦   ¦   ¦   ¦           ¦       values-fi.json
+¦   ¦   ¦   ¦           ¦       values-fr-rCA.json
+¦   ¦   ¦   ¦           ¦       values-fr.json
+¦   ¦   ¦   ¦           ¦       values-gl.json
+¦   ¦   ¦   ¦           ¦       values-gu.json
+¦   ¦   ¦   ¦           ¦       values-hi.json
+¦   ¦   ¦   ¦           ¦       values-hr.json
+¦   ¦   ¦   ¦           ¦       values-hu.json
+¦   ¦   ¦   ¦           ¦       values-hy.json
+¦   ¦   ¦   ¦           ¦       values-in.json
+¦   ¦   ¦   ¦           ¦       values-is.json
+¦   ¦   ¦   ¦           ¦       values-it.json
+¦   ¦   ¦   ¦           ¦       values-iw.json
+¦   ¦   ¦   ¦           ¦       values-ja.json
+¦   ¦   ¦   ¦           ¦       values-ka.json
+¦   ¦   ¦   ¦           ¦       values-kk.json
+¦   ¦   ¦   ¦           ¦       values-km.json
+¦   ¦   ¦   ¦           ¦       values-kn.json
+¦   ¦   ¦   ¦           ¦       values-ko.json
+¦   ¦   ¦   ¦           ¦       values-ky.json
+¦   ¦   ¦   ¦           ¦       values-lo.json
+¦   ¦   ¦   ¦           ¦       values-lt.json
+¦   ¦   ¦   ¦           ¦       values-lv.json
+¦   ¦   ¦   ¦           ¦       values-mk.json
+¦   ¦   ¦   ¦           ¦       values-ml.json
+¦   ¦   ¦   ¦           ¦       values-mn.json
+¦   ¦   ¦   ¦           ¦       values-mr.json
+¦   ¦   ¦   ¦           ¦       values-ms.json
+¦   ¦   ¦   ¦           ¦       values-my.json
+¦   ¦   ¦   ¦           ¦       values-nb.json
+¦   ¦   ¦   ¦           ¦       values-ne.json
+¦   ¦   ¦   ¦           ¦       values-night-v8.json
+¦   ¦   ¦   ¦           ¦       values-nl.json
+¦   ¦   ¦   ¦           ¦       values-or.json
+¦   ¦   ¦   ¦           ¦       values-pa.json
+¦   ¦   ¦   ¦           ¦       values-pl.json
+¦   ¦   ¦   ¦           ¦       values-pt-rBR.json
+¦   ¦   ¦   ¦           ¦       values-pt-rPT.json
+¦   ¦   ¦   ¦           ¦       values-pt.json
+¦   ¦   ¦   ¦           ¦       values-ro.json
+¦   ¦   ¦   ¦           ¦       values-ru.json
+¦   ¦   ¦   ¦           ¦       values-si.json
+¦   ¦   ¦   ¦           ¦       values-sk.json
+¦   ¦   ¦   ¦           ¦       values-sl.json
+¦   ¦   ¦   ¦           ¦       values-sq.json
+¦   ¦   ¦   ¦           ¦       values-sr.json
+¦   ¦   ¦   ¦           ¦       values-sv.json
+¦   ¦   ¦   ¦           ¦       values-sw.json
+¦   ¦   ¦   ¦           ¦       values-ta.json
+¦   ¦   ¦   ¦           ¦       values-te.json
+¦   ¦   ¦   ¦           ¦       values-th.json
+¦   ¦   ¦   ¦           ¦       values-tl.json
+¦   ¦   ¦   ¦           ¦       values-tr.json
+¦   ¦   ¦   ¦           ¦       values-uk.json
+¦   ¦   ¦   ¦           ¦       values-ur.json
+¦   ¦   ¦   ¦           ¦       values-uz.json
+¦   ¦   ¦   ¦           ¦       values-v21.json
+¦   ¦   ¦   ¦           ¦       values-vi.json
+¦   ¦   ¦   ¦           ¦       values-zh-rCN.json
+¦   ¦   ¦   ¦           ¦       values-zh-rHK.json
+¦   ¦   ¦   ¦           ¦       values-zh-rTW.json
+¦   ¦   ¦   ¦           ¦       values-zu.json
+¦   ¦   ¦   ¦           ¦       values.json
+¦   ¦   ¦   ¦           ¦       
+¦   ¦   ¦   ¦           +---single
+¦   ¦   ¦   ¦                   debug.json
+¦   ¦   ¦   ¦                   
+¦   ¦   ¦   +---merged_shaders
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---mixed_scope_dex_archive
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---navigation_json
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           navigation.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---packaged_manifests
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           AndroidManifest.xml
+¦   ¦   ¦   ¦           output-metadata.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---packaged_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---drawable-v21
+¦   ¦   ¦   ¦       ¦       launch_background.xml
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---mipmap-hdpi-v4
+¦   ¦   ¦   ¦       ¦       ic_launcher.png
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---mipmap-mdpi-v4
+¦   ¦   ¦   ¦       ¦       ic_launcher.png
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---mipmap-xhdpi-v4
+¦   ¦   ¦   ¦       ¦       ic_launcher.png
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---mipmap-xxhdpi-v4
+¦   ¦   ¦   ¦       ¦       ic_launcher.png
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---mipmap-xxxhdpi-v4
+¦   ¦   ¦   ¦       ¦       ic_launcher.png
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---values
+¦   ¦   ¦   ¦       ¦       values.xml
+¦   ¦   ¦   ¦       ¦       
+¦   ¦   ¦   ¦       +---values-night-v8
+¦   ¦   ¦   ¦               values-night-v8.xml
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---processed_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦               output-metadata.json
+¦   ¦   ¦   ¦               resources-debug.ap_
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---project_dex_archive
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦           ¦   85e7118346788d9b8b0bb0d1e32e11e05d8469f47c7960656206c73744f43b61_0.jar
+¦   ¦   ¦   ¦           ¦   
+¦   ¦   ¦   ¦           +---com
+¦   ¦   ¦   ¦           ¦   +---example
+¦   ¦   ¦   ¦           ¦       +---appvdos
+¦   ¦   ¦   ¦           ¦               MainActivity.dex
+¦   ¦   ¦   ¦           ¦               
+¦   ¦   ¦   ¦           +---io
+¦   ¦   ¦   ¦               +---flutter
+¦   ¦   ¦   ¦                   +---plugins
+¦   ¦   ¦   ¦                           GeneratedPluginRegistrant.dex
+¦   ¦   ¦   ¦                           
+¦   ¦   ¦   +---runtime_symbol_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---signing_config_versions
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           signing-config-versions.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---source_set_path_map
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           file-map.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---stripped_native_libs
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦           +---lib
+¦   ¦   ¦   ¦               +---arm64-v8a
+¦   ¦   ¦   ¦                       libflutter.so
+¦   ¦   ¦   ¦                       libVkLayer_khronos_validation.so
+¦   ¦   ¦   ¦                       
+¦   ¦   ¦   +---sub_project_dex_archive
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   ¦               8d0b36d407620b721a862ebe7baa98d368a28c8cd83ebe087919941a7fe13c35_0.jar
+¦   ¦   ¦   ¦               f37a34a5622c06c59446f3ac270a6482378e77ab8ff880e19ee3c9ed966cadf7_0.jar
+¦   ¦   ¦   ¦               f865baeb5e83068816cbb370c6ff2bc933c269cac79f68469b20f1237a7a8c94_0.jar
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---symbol_list_with_package_name
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           package-aware-r.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---validate_signing_config
+¦   ¦   ¦       +---debug
+¦   ¦   +---kotlin
+¦   ¦   ¦   +---compileDebugKotlin
+¦   ¦   ¦       +---cacheable
+¦   ¦   ¦       +---classpath-snapshot
+¦   ¦   ¦       +---local-state
+¦   ¦   +---outputs
+¦   ¦   ¦   +---apk
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           app-debug.apk
+¦   ¦   ¦   ¦           output-metadata.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---flutter-apk
+¦   ¦   ¦   ¦       app-debug.apk
+¦   ¦   ¦   ¦       app-debug.apk.sha1
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---logs
+¦   ¦   ¦           manifest-merger-debug-report.txt
+¦   ¦   ¦           
+¦   ¦   +---tmp
+¦   ¦       +---compileDebugJavaWithJavac
+¦   ¦       ¦       previous-compilation-data.bin
+¦   ¦       ¦       
+¦   ¦       +---kotlin-classes
+¦   ¦       ¦   +---debug
+¦   ¦       ¦       +---com
+¦   ¦       ¦       ¦   +---example
+¦   ¦       ¦       ¦       +---appvdos
+¦   ¦       ¦       ¦               MainActivity.class
+¦   ¦       ¦       ¦               
+¦   ¦       ¦       +---META-INF
+¦   ¦       ¦               app_debug.kotlin_module
+¦   ¦       ¦               
+¦   ¦       +---packJniLibsflutterBuildDebug
+¦   ¦               MANIFEST.MF
+¦   ¦               
+¦   +---file_picker
+¦   ¦   +---.transforms
+¦   ¦   ¦   +---c960e308b0b4aeac9bf6755e333a1a28
+¦   ¦   ¦       ¦   results.bin
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---transformed
+¦   ¦   ¦           +---classes
+¦   ¦   ¦                   classes.dex
+¦   ¦   ¦                   
+¦   ¦   +---generated
+¦   ¦   ¦   +---ap_generated_sources
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---res
+¦   ¦   ¦       +---pngs
+¦   ¦   ¦       ¦   +---debug
+¦   ¦   ¦       +---resValues
+¦   ¦   ¦           +---debug
+¦   ¦   +---intermediates
+¦   ¦   ¦   +---aapt_friendly_merged_manifests
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---aapt
+¦   ¦   ¦   ¦               AndroidManifest.xml
+¦   ¦   ¦   ¦               output-metadata.json
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---aar_libs_directory
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---libs
+¦   ¦   ¦   +---aar_main_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           classes.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---aar_metadata
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           aar-metadata.properties
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---annotations_typedef_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           typedefs.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---annotations_zip
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---annotation_processor_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           annotationProcessors.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compiled_local_resources
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---compile_library_classes_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           classes.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compile_r_class_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compile_symbol_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---data_binding_layout_info_type_package
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---incremental
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦   ¦   +---packageDebugResources
+¦   ¦   ¦   ¦   ¦       ¦   compile-file-map.properties
+¦   ¦   ¦   ¦   ¦       ¦   merger.xml
+¦   ¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦   ¦       +---merged.dir
+¦   ¦   ¦   ¦   ¦       +---stripped.dir
+¦   ¦   ¦   ¦   +---debug-mergeJavaRes
+¦   ¦   ¦   ¦   ¦   ¦   merge-state
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---zip-cache
+¦   ¦   ¦   ¦   +---mergeDebugJniLibFolders
+¦   ¦   ¦   ¦   ¦       merger.xml
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---mergeDebugShaders
+¦   ¦   ¦   ¦   ¦       merger.xml
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---packageDebugAssets
+¦   ¦   ¦   ¦           merger.xml
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---javac
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---classes
+¦   ¦   ¦   ¦           +---com
+¦   ¦   ¦   ¦               +---mr
+¦   ¦   ¦   ¦                   +---flutter
+¦   ¦   ¦   ¦                       +---plugin
+¦   ¦   ¦   ¦                           +---filepicker
+¦   ¦   ¦   ¦                                   FileInfo$Builder.class
+¦   ¦   ¦   ¦                                   FileInfo.class
+¦   ¦   ¦   ¦                                   FilePickerDelegate$1.class
+¦   ¦   ¦   ¦                                   FilePickerDelegate$2.class
+¦   ¦   ¦   ¦                                   FilePickerDelegate$3.class
+¦   ¦   ¦   ¦                                   FilePickerDelegate$PermissionManager.class
+¦   ¦   ¦   ¦                                   FilePickerDelegate.class
+¦   ¦   ¦   ¦                                   FilePickerPlugin$1.class
+¦   ¦   ¦   ¦                                   FilePickerPlugin$LifeCycleObserver.class
+¦   ¦   ¦   ¦                                   FilePickerPlugin$MethodResultWrapper$1.class
+¦   ¦   ¦   ¦                                   FilePickerPlugin$MethodResultWrapper$2.class
+¦   ¦   ¦   ¦                                   FilePickerPlugin$MethodResultWrapper$3.class
+¦   ¦   ¦   ¦                                   FilePickerPlugin$MethodResultWrapper.class
+¦   ¦   ¦   ¦                                   FilePickerPlugin.class
+¦   ¦   ¦   ¦                                   FileUtils.class
+¦   ¦   ¦   ¦                                   
+¦   ¦   ¦   +---library_and_local_jars_jni
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---jni
+¦   ¦   ¦   +---library_assets
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---library_jni
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---jni
+¦   ¦   ¦   +---local_only_symbol_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R-def.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---manifest_merge_blame_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           manifest-merger-blame-debug-report.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_java_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           feature-file_picker.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_jni_libs
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---merged_manifest
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           AndroidManifest.xml
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_shaders
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---navigation_json
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           navigation.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---packaged_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---public_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---runtime_library_classes_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           classes.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---symbol_list_with_package_name
+¦   ¦   ¦       +---debug
+¦   ¦   ¦               package-aware-r.txt
+¦   ¦   ¦               
+¦   ¦   +---outputs
+¦   ¦   ¦   +---aar
+¦   ¦   ¦   ¦       file_picker-debug.aar
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---logs
+¦   ¦   ¦           manifest-merger-debug-report.txt
+¦   ¦   ¦           
+¦   ¦   +---tmp
+¦   ¦       +---compileDebugJavaWithJavac
+¦   ¦               previous-compilation-data.bin
+¦   ¦               
+¦   +---flutter_plugin_android_lifecycle
+¦   ¦   +---.transforms
+¦   ¦   ¦   +---0e9398a42da916db41beed2b32dda414
+¦   ¦   ¦       ¦   results.bin
+¦   ¦   ¦       ¦   
+¦   ¦   ¦       +---transformed
+¦   ¦   ¦           +---classes
+¦   ¦   ¦                   classes.dex
+¦   ¦   ¦                   
+¦   ¦   +---generated
+¦   ¦   ¦   +---ap_generated_sources
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---res
+¦   ¦   ¦       +---pngs
+¦   ¦   ¦       ¦   +---debug
+¦   ¦   ¦       +---resValues
+¦   ¦   ¦           +---debug
+¦   ¦   +---intermediates
+¦   ¦   ¦   +---aapt_friendly_merged_manifests
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---aapt
+¦   ¦   ¦   ¦               AndroidManifest.xml
+¦   ¦   ¦   ¦               output-metadata.json
+¦   ¦   ¦   ¦               
+¦   ¦   ¦   +---aar_libs_directory
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---libs
+¦   ¦   ¦   +---aar_main_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           classes.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---aar_metadata
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           aar-metadata.properties
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---annotations_typedef_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           typedefs.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---annotations_zip
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---annotation_processor_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           annotationProcessors.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compiled_local_resources
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---compile_library_classes_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           classes.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compile_r_class_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---compile_symbol_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---data_binding_layout_info_type_package
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---incremental
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦   ¦   +---packageDebugResources
+¦   ¦   ¦   ¦   ¦       ¦   compile-file-map.properties
+¦   ¦   ¦   ¦   ¦       ¦   merger.xml
+¦   ¦   ¦   ¦   ¦       ¦   
+¦   ¦   ¦   ¦   ¦       +---merged.dir
+¦   ¦   ¦   ¦   ¦       +---stripped.dir
+¦   ¦   ¦   ¦   +---debug-mergeJavaRes
+¦   ¦   ¦   ¦   ¦   ¦   merge-state
+¦   ¦   ¦   ¦   ¦   ¦   
+¦   ¦   ¦   ¦   ¦   +---zip-cache
+¦   ¦   ¦   ¦   +---mergeDebugJniLibFolders
+¦   ¦   ¦   ¦   ¦       merger.xml
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---mergeDebugShaders
+¦   ¦   ¦   ¦   ¦       merger.xml
+¦   ¦   ¦   ¦   ¦       
+¦   ¦   ¦   ¦   +---packageDebugAssets
+¦   ¦   ¦   ¦           merger.xml
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---javac
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---classes
+¦   ¦   ¦   ¦           +---io
+¦   ¦   ¦   ¦               +---flutter
+¦   ¦   ¦   ¦                   +---embedding
+¦   ¦   ¦   ¦                   ¦   +---engine
+¦   ¦   ¦   ¦                   ¦       +---plugins
+¦   ¦   ¦   ¦                   ¦           +---lifecycle
+¦   ¦   ¦   ¦                   ¦                   FlutterLifecycleAdapter.class
+¦   ¦   ¦   ¦                   ¦                   
+¦   ¦   ¦   ¦                   +---plugins
+¦   ¦   ¦   ¦                       +---flutter_plugin_android_lifecycle
+¦   ¦   ¦   ¦                               FlutterAndroidLifecyclePlugin.class
+¦   ¦   ¦   ¦                               
+¦   ¦   ¦   +---library_and_local_jars_jni
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---jni
+¦   ¦   ¦   +---library_assets
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---library_jni
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---jni
+¦   ¦   ¦   +---local_only_symbol_list
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           R-def.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---manifest_merge_blame_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           manifest-merger-blame-debug-report.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_consumer_proguard_file
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           proguard.txt
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_java_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           feature-flutter_plugin_android_lifecycle.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_jni_libs
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---merged_manifest
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           AndroidManifest.xml
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---merged_shaders
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦       +---out
+¦   ¦   ¦   +---navigation_json
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           navigation.json
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---packaged_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---public_res
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   +---runtime_library_classes_jar
+¦   ¦   ¦   ¦   +---debug
+¦   ¦   ¦   ¦           classes.jar
+¦   ¦   ¦   ¦           
+¦   ¦   ¦   +---symbol_list_with_package_name
+¦   ¦   ¦       +---debug
+¦   ¦   ¦               package-aware-r.txt
+¦   ¦   ¦               
+¦   ¦   +---outputs
+¦   ¦   ¦   +---aar
+¦   ¦   ¦   ¦       flutter_plugin_android_lifecycle-debug.aar
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---logs
+¦   ¦   ¦           manifest-merger-debug-report.txt
+¦   ¦   ¦           
+¦   ¦   +---tmp
+¦   ¦       +---compileDebugJavaWithJavac
+¦   ¦               previous-compilation-data.bin
+¦   ¦               
+¦   +---native_assets
+¦   ¦   +---android
+¦   +---printing
+¦       +---.transforms
+¦       ¦   +---27e25031df6cce98126c5158d25368b3
+¦       ¦       ¦   results.bin
+¦       ¦       ¦   
+¦       ¦       +---transformed
+¦       ¦           +---classes
+¦       ¦                   classes.dex
+¦       ¦                   
+¦       +---generated
+¦       ¦   +---ap_generated_sources
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---out
+¦       ¦   +---res
+¦       ¦       +---pngs
+¦       ¦       ¦   +---debug
+¦       ¦       +---resValues
+¦       ¦           +---debug
+¦       +---intermediates
+¦       ¦   +---aapt_friendly_merged_manifests
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---aapt
+¦       ¦   ¦               AndroidManifest.xml
+¦       ¦   ¦               output-metadata.json
+¦       ¦   ¦               
+¦       ¦   +---aar_libs_directory
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---libs
+¦       ¦   +---aar_main_jar
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           classes.jar
+¦       ¦   ¦           
+¦       ¦   +---aar_metadata
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           aar-metadata.properties
+¦       ¦   ¦           
+¦       ¦   +---annotations_typedef_file
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           typedefs.txt
+¦       ¦   ¦           
+¦       ¦   +---annotations_zip
+¦       ¦   ¦   +---debug
+¦       ¦   +---annotation_processor_list
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           annotationProcessors.json
+¦       ¦   ¦           
+¦       ¦   +---compiled_local_resources
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---out
+¦       ¦   ¦               xml_flutter_printing_file_paths.xml.flat
+¦       ¦   ¦               
+¦       ¦   +---compile_library_classes_jar
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           classes.jar
+¦       ¦   ¦           
+¦       ¦   +---compile_r_class_jar
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           R.jar
+¦       ¦   ¦           
+¦       ¦   +---compile_symbol_list
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           R.txt
+¦       ¦   ¦           
+¦       ¦   +---data_binding_layout_info_type_package
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---out
+¦       ¦   +---incremental
+¦       ¦   ¦   +---debug
+¦       ¦   ¦   ¦   +---packageDebugResources
+¦       ¦   ¦   ¦       ¦   compile-file-map.properties
+¦       ¦   ¦   ¦       ¦   merger.xml
+¦       ¦   ¦   ¦       ¦   
+¦       ¦   ¦   ¦       +---merged.dir
+¦       ¦   ¦   ¦       +---stripped.dir
+¦       ¦   ¦   +---debug-mergeJavaRes
+¦       ¦   ¦   ¦   ¦   merge-state
+¦       ¦   ¦   ¦   ¦   
+¦       ¦   ¦   ¦   +---zip-cache
+¦       ¦   ¦   +---mergeDebugJniLibFolders
+¦       ¦   ¦   ¦       merger.xml
+¦       ¦   ¦   ¦       
+¦       ¦   ¦   +---mergeDebugShaders
+¦       ¦   ¦   ¦       merger.xml
+¦       ¦   ¦   ¦       
+¦       ¦   ¦   +---packageDebugAssets
+¦       ¦   ¦           merger.xml
+¦       ¦   ¦           
+¦       ¦   +---javac
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---classes
+¦       ¦   ¦           +---android
+¦       ¦   ¦           ¦   +---print
+¦       ¦   ¦           ¦           PdfConvert$1$1.class
+¦       ¦   ¦           ¦           PdfConvert$1.class
+¦       ¦   ¦           ¦           PdfConvert$Result.class
+¦       ¦   ¦           ¦           PdfConvert.class
+¦       ¦   ¦           ¦           
+¦       ¦   ¦           +---net
+¦       ¦   ¦               +---nfet
+¦       ¦   ¦                   +---flutter
+¦       ¦   ¦                       +---printing
+¦       ¦   ¦                               PrintFileProvider.class
+¦       ¦   ¦                               PrintingHandler$1.class
+¦       ¦   ¦                               PrintingHandler.class
+¦       ¦   ¦                               PrintingJob$1$1.class
+¦       ¦   ¦                               PrintingJob$1.class
+¦       ¦   ¦                               PrintingJob.class
+¦       ¦   ¦                               PrintingPlugin.class
+¦       ¦   ¦                               
+¦       ¦   +---library_and_local_jars_jni
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---jni
+¦       ¦   +---library_assets
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---out
+¦       ¦   +---library_jni
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---jni
+¦       ¦   +---local_only_symbol_list
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           R-def.txt
+¦       ¦   ¦           
+¦       ¦   +---manifest_merge_blame_file
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           manifest-merger-blame-debug-report.txt
+¦       ¦   ¦           
+¦       ¦   +---merged_java_res
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           feature-printing.jar
+¦       ¦   ¦           
+¦       ¦   +---merged_jni_libs
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---out
+¦       ¦   +---merged_manifest
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           AndroidManifest.xml
+¦       ¦   ¦           
+¦       ¦   +---merged_shaders
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---out
+¦       ¦   +---navigation_json
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           navigation.json
+¦       ¦   ¦           
+¦       ¦   +---packaged_res
+¦       ¦   ¦   +---debug
+¦       ¦   ¦       +---xml
+¦       ¦   ¦               flutter_printing_file_paths.xml
+¦       ¦   ¦               
+¦       ¦   +---public_res
+¦       ¦   ¦   +---debug
+¦       ¦   +---runtime_library_classes_jar
+¦       ¦   ¦   +---debug
+¦       ¦   ¦           classes.jar
+¦       ¦   ¦           
+¦       ¦   +---symbol_list_with_package_name
+¦       ¦       +---debug
+¦       ¦               package-aware-r.txt
+¦       ¦               
+¦       +---outputs
+¦       ¦   +---aar
+¦       ¦   ¦       printing-debug.aar
+¦       ¦   ¦       
+¦       ¦   +---logs
+¦       ¦           manifest-merger-debug-report.txt
+¦       ¦           
+¦       +---tmp
+¦           +---compileDebugJavaWithJavac
+¦                   previous-compilation-data.bin
+¦                   
++---ios
+¦   ¦   .gitignore
+¦   ¦   
+¦   +---Flutter
+¦   ¦       AppFrameworkInfo.plist
+¦   ¦       Debug.xcconfig
+¦   ¦       flutter_export_environment.sh
+¦   ¦       Generated.xcconfig
+¦   ¦       Release.xcconfig
+¦   ¦       
+¦   +---Runner
+¦   ¦   ¦   AppDelegate.swift
+¦   ¦   ¦   GeneratedPluginRegistrant.h
+¦   ¦   ¦   GeneratedPluginRegistrant.m
+¦   ¦   ¦   Info.plist
+¦   ¦   ¦   Runner-Bridging-Header.h
+¦   ¦   ¦   
+¦   ¦   +---Assets.xcassets
+¦   ¦   ¦   +---AppIcon.appiconset
+¦   ¦   ¦   ¦       Contents.json
+¦   ¦   ¦   ¦       Icon-App-1024x1024@1x.png
+¦   ¦   ¦   ¦       Icon-App-20x20@1x.png
+¦   ¦   ¦   ¦       Icon-App-20x20@2x.png
+¦   ¦   ¦   ¦       Icon-App-20x20@3x.png
+¦   ¦   ¦   ¦       Icon-App-29x29@1x.png
+¦   ¦   ¦   ¦       Icon-App-29x29@2x.png
+¦   ¦   ¦   ¦       Icon-App-29x29@3x.png
+¦   ¦   ¦   ¦       Icon-App-40x40@1x.png
+¦   ¦   ¦   ¦       Icon-App-40x40@2x.png
+¦   ¦   ¦   ¦       Icon-App-40x40@3x.png
+¦   ¦   ¦   ¦       Icon-App-60x60@2x.png
+¦   ¦   ¦   ¦       Icon-App-60x60@3x.png
+¦   ¦   ¦   ¦       Icon-App-76x76@1x.png
+¦   ¦   ¦   ¦       Icon-App-76x76@2x.png
+¦   ¦   ¦   ¦       Icon-App-83.5x83.5@2x.png
+¦   ¦   ¦   ¦       
+¦   ¦   ¦   +---LaunchImage.imageset
+¦   ¦   ¦           Contents.json
+¦   ¦   ¦           LaunchImage.png
+¦   ¦   ¦           LaunchImage@2x.png
+¦   ¦   ¦           LaunchImage@3x.png
+¦   ¦   ¦           README.md
+¦   ¦   ¦           
+¦   ¦   +---Base.lproj
+¦   ¦           LaunchScreen.storyboard
+¦   ¦           Main.storyboard
+¦   ¦           
+¦   +---Runner.xcodeproj
+¦   ¦   ¦   project.pbxproj
+¦   ¦   ¦   
+¦   ¦   +---project.xcworkspace
+¦   ¦   ¦   ¦   contents.xcworkspacedata
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---xcshareddata
+¦   ¦   ¦           IDEWorkspaceChecks.plist
+¦   ¦   ¦           WorkspaceSettings.xcsettings
+¦   ¦   ¦           
+¦   ¦   +---xcshareddata
+¦   ¦       +---xcschemes
+¦   ¦               Runner.xcscheme
+¦   ¦               
+¦   +---Runner.xcworkspace
+¦   ¦   ¦   contents.xcworkspacedata
+¦   ¦   ¦   
+¦   ¦   +---xcshareddata
+¦   ¦           IDEWorkspaceChecks.plist
+¦   ¦           WorkspaceSettings.xcsettings
+¦   ¦           
+¦   +---RunnerTests
+¦           RunnerTests.swift
+¦           
++---lib
+¦   ¦   main.dart
+¦   ¦   
+¦   +---screens
+¦   ¦       dashboard_screen.dart
+¦   ¦       login_screen.dart
+¦   ¦       register_screen.dart
+¦   ¦       upload_screen.dart
+¦   ¦       
+¦   +---services
+¦   ¦       api_service.dart
+¦   ¦       auth_service.dart
+¦   ¦       excel_service.dart
+¦   ¦       
+¦   +---utils
+¦   ¦       constants.dart
+¦   ¦       
+¦   +---widgets
+¦           bar_chart_widget.dart
+¦           custom_button.dart
+¦           custom_textfield.dart
+¦           daily_delivery_report_widget.dart
+¦           delivery_report_widget.dart
+¦           delivery_trends_chart_widget.dart
+¦           distribution_by_center_widget.dart
+¦           info_table.dart
+¦           line_chart_widget.dart
+¦           loader.dart
+¦           pending_orders_widget.dart
+¦           pie_chart_widget.dart
+¦           product_category_widget.dart
+¦           summary_table_widget.dart
+¦           
++---linux
+¦   ¦   .gitignore
+¦   ¦   CMakeLists.txt
+¦   ¦   
+¦   +---flutter
+¦   ¦   ¦   CMakeLists.txt
+¦   ¦   ¦   generated_plugins.cmake
+¦   ¦   ¦   generated_plugin_registrant.cc
+¦   ¦   ¦   generated_plugin_registrant.h
+¦   ¦   ¦   
+¦   ¦   +---ephemeral
+¦   ¦       +---.plugin_symlinks
+¦   ¦           +---printing
+¦   ¦               ¦   analysis_options.yaml
+¦   ¦               ¦   CHANGELOG.md
+¦   ¦               ¦   CONTRIBUTING.md
+¦   ¦               ¦   example.png
+¦   ¦               ¦   LICENSE
+¦   ¦               ¦   pubspec.yaml
+¦   ¦               ¦   README.md
+¦   ¦               ¦   
+¦   ¦               +---android
+¦   ¦               ¦   ¦   build.gradle
+¦   ¦               ¦   ¦   settings.gradle
+¦   ¦               ¦   ¦   
+¦   ¦               ¦   +---src
+¦   ¦               ¦       +---main
+¦   ¦               ¦           ¦   AndroidManifest.xml
+¦   ¦               ¦           ¦   
+¦   ¦               ¦           +---java
+¦   ¦               ¦           ¦   +---android
+¦   ¦               ¦           ¦   ¦   +---print
+¦   ¦               ¦           ¦   ¦           PdfConvert.java
+¦   ¦               ¦           ¦   ¦           
+¦   ¦               ¦           ¦   +---net
+¦   ¦               ¦           ¦       +---nfet
+¦   ¦               ¦           ¦           +---flutter
+¦   ¦               ¦           ¦               +---printing
+¦   ¦               ¦           ¦                       PrintFileProvider.java
+¦   ¦               ¦           ¦                       PrintingHandler.java
+¦   ¦               ¦           ¦                       PrintingJob.java
+¦   ¦               ¦           ¦                       PrintingPlugin.java
+¦   ¦               ¦           ¦                       
+¦   ¦               ¦           +---res
+¦   ¦               ¦               +---xml
+¦   ¦               ¦                       flutter_printing_file_paths.xml
+¦   ¦               ¦                       
+¦   ¦               +---example
+¦   ¦               ¦   ¦   pubspec.yaml
+¦   ¦               ¦   ¦   
+¦   ¦               ¦   +---lib
+¦   ¦               ¦           main.dart
+¦   ¦               ¦           
+¦   ¦               +---ios
+¦   ¦               ¦   ¦   printing.podspec
+¦   ¦               ¦   ¦   
+¦   ¦               ¦   +---Classes
+¦   ¦               ¦           CustomPrintPaper.swift
+¦   ¦               ¦           PrintingPlugin.m
+¦   ¦               ¦           PrintingPlugin.swift
+¦   ¦               ¦           PrintJob.swift
+¦   ¦               ¦           
+¦   ¦               +---lib
+¦   ¦               ¦   ¦   printing.dart
+¦   ¦               ¦   ¦   printing_web.dart
+¦   ¦               ¦   ¦   
+¦   ¦               ¦   +---src
+¦   ¦               ¦       ¦   asset_utils.dart
+¦   ¦               ¦       ¦   cache.dart
+¦   ¦               ¦       ¦   callback.dart
+¦   ¦               ¦       ¦   interface.dart
+¦   ¦               ¦       ¦   method_channel.dart
+¦   ¦               ¦       ¦   method_channel_ffi.dart
+¦   ¦               ¦       ¦   method_channel_js.dart
+¦   ¦               ¦       ¦   mutex.dart
+¦   ¦               ¦       ¦   output_type.dart
+¦   ¦               ¦       ¦   pdfjs.dart
+¦   ¦               ¦       ¦   printer.dart
+¦   ¦               ¦       ¦   printing.dart
+¦   ¦               ¦       ¦   printing_info.dart
+¦   ¦               ¦       ¦   print_job.dart
+¦   ¦               ¦       ¦   raster.dart
+¦   ¦               ¦       ¦   
+¦   ¦               ¦       +---fonts
+¦   ¦               ¦       ¦       font.dart
+¦   ¦               ¦       ¦       gfonts.dart
+¦   ¦               ¦       ¦       manifest.dart
+¦   ¦               ¦       ¦       
+¦   ¦               ¦       +---preview
+¦   ¦               ¦               actions.dart
+¦   ¦               ¦               action_bar_theme.dart
+¦   ¦               ¦               controller.dart
+¦   ¦               ¦               custom.dart
+¦   ¦               ¦               page.dart
+¦   ¦               ¦               pdf_preview.dart
+¦   ¦               ¦               raster.dart
+¦   ¦               ¦               
+¦   ¦               +---linux
+¦   ¦               ¦   ¦   CMakeLists.txt
+¦   ¦               ¦   ¦   printing_plugin.cc
+¦   ¦               ¦   ¦   print_job.cc
+¦   ¦               ¦   ¦   print_job.h
+¦   ¦               ¦   ¦   
+¦   ¦               ¦   +---include
+¦   ¦               ¦       +---printing
+¦   ¦               ¦               printing_plugin.h
+¦   ¦               ¦               
+¦   ¦               +---macos
+¦   ¦               ¦   ¦   printing.podspec
+¦   ¦               ¦   ¦   
+¦   ¦               ¦   +---Classes
+¦   ¦               ¦           PrintingPlugin.m
+¦   ¦               ¦           PrintingPlugin.swift
+¦   ¦               ¦           PrintJob.swift
+¦   ¦               ¦           
+¦   ¦               +---test
+¦   ¦               ¦       document_test.dart
+¦   ¦               ¦       info_test.dart
+¦   ¦               ¦       printing_test.dart
+¦   ¦               ¦       raster_test.dart
+¦   ¦               ¦       
+¦   ¦               +---windows
+¦   ¦                   ¦   CMakeLists.txt
+¦   ¦                   ¦   DownloadProject.cmake
+¦   ¦                   ¦   DownloadProject.CMakeLists.cmake.in
+¦   ¦                   ¦   printing.cpp
+¦   ¦                   ¦   printing.h
+¦   ¦                   ¦   printing_plugin.cpp
+¦   ¦                   ¦   print_job.cpp
+¦   ¦                   ¦   print_job.h
+¦   ¦                   ¦   
+¦   ¦                   +---include
+¦   ¦                       +---printing
+¦   ¦                               printing_plugin.h
+¦   ¦                               
+¦   +---runner
+¦           CMakeLists.txt
+¦           main.cc
+¦           my_application.cc
+¦           my_application.h
+¦           
++---macos
+¦   ¦   .gitignore
+¦   ¦   
+¦   +---Flutter
+¦   ¦   ¦   Flutter-Debug.xcconfig
+¦   ¦   ¦   Flutter-Release.xcconfig
+¦   ¦   ¦   GeneratedPluginRegistrant.swift
+¦   ¦   ¦   
+¦   ¦   +---ephemeral
+¦   ¦           Flutter-Generated.xcconfig
+¦   ¦           flutter_export_environment.sh
+¦   ¦           
+¦   +---Runner
+¦   ¦   ¦   AppDelegate.swift
+¦   ¦   ¦   DebugProfile.entitlements
+¦   ¦   ¦   Info.plist
+¦   ¦   ¦   MainFlutterWindow.swift
+¦   ¦   ¦   Release.entitlements
+¦   ¦   ¦   
+¦   ¦   +---Assets.xcassets
+¦   ¦   ¦   +---AppIcon.appiconset
+¦   ¦   ¦           app_icon_1024.png
+¦   ¦   ¦           app_icon_128.png
+¦   ¦   ¦           app_icon_16.png
+¦   ¦   ¦           app_icon_256.png
+¦   ¦   ¦           app_icon_32.png
+¦   ¦   ¦           app_icon_512.png
+¦   ¦   ¦           app_icon_64.png
+¦   ¦   ¦           Contents.json
+¦   ¦   ¦           
+¦   ¦   +---Base.lproj
+¦   ¦   ¦       MainMenu.xib
+¦   ¦   ¦       
+¦   ¦   +---Configs
+¦   ¦           AppInfo.xcconfig
+¦   ¦           Debug.xcconfig
+¦   ¦           Release.xcconfig
+¦   ¦           Warnings.xcconfig
+¦   ¦           
+¦   +---Runner.xcodeproj
+¦   ¦   ¦   project.pbxproj
+¦   ¦   ¦   
+¦   ¦   +---project.xcworkspace
+¦   ¦   ¦   +---xcshareddata
+¦   ¦   ¦           IDEWorkspaceChecks.plist
+¦   ¦   ¦           
+¦   ¦   +---xcshareddata
+¦   ¦       +---xcschemes
+¦   ¦               Runner.xcscheme
+¦   ¦               
+¦   +---Runner.xcworkspace
+¦   ¦   ¦   contents.xcworkspacedata
+¦   ¦   ¦   
+¦   ¦   +---xcshareddata
+¦   ¦           IDEWorkspaceChecks.plist
+¦   ¦           
+¦   +---RunnerTests
+¦           RunnerTests.swift
+¦           
++---test
+¦       widget_test.dart
+¦       
++---web
+¦   ¦   favicon.png
+¦   ¦   index.html
+¦   ¦   manifest.json
+¦   ¦   
+¦   +---icons
+¦           Icon-192.png
+¦           Icon-512.png
+¦           Icon-maskable-192.png
+¦           Icon-maskable-512.png
+¦           
++---windows
+    ¦   .gitignore
+    ¦   CMakeLists.txt
+    ¦   
+    +---flutter
+    ¦   ¦   CMakeLists.txt
+    ¦   ¦   generated_plugins.cmake
+    ¦   ¦   generated_plugin_registrant.cc
+    ¦   ¦   generated_plugin_registrant.h
+    ¦   ¦   
+    ¦   +---ephemeral
+    ¦       +---.plugin_symlinks
+    ¦           +---printing
+    ¦               ¦   analysis_options.yaml
+    ¦               ¦   CHANGELOG.md
+    ¦               ¦   CONTRIBUTING.md
+    ¦               ¦   example.png
+    ¦               ¦   LICENSE
+    ¦               ¦   pubspec.yaml
+    ¦               ¦   README.md
+    ¦               ¦   
+    ¦               +---android
+    ¦               ¦   ¦   build.gradle
+    ¦               ¦   ¦   settings.gradle
+    ¦               ¦   ¦   
+    ¦               ¦   +---src
+    ¦               ¦       +---main
+    ¦               ¦           ¦   AndroidManifest.xml
+    ¦               ¦           ¦   
+    ¦               ¦           +---java
+    ¦               ¦           ¦   +---android
+    ¦               ¦           ¦   ¦   +---print
+    ¦               ¦           ¦   ¦           PdfConvert.java
+    ¦               ¦           ¦   ¦           
+    ¦               ¦           ¦   +---net
+    ¦               ¦           ¦       +---nfet
+    ¦               ¦           ¦           +---flutter
+    ¦               ¦           ¦               +---printing
+    ¦               ¦           ¦                       PrintFileProvider.java
+    ¦               ¦           ¦                       PrintingHandler.java
+    ¦               ¦           ¦                       PrintingJob.java
+    ¦               ¦           ¦                       PrintingPlugin.java
+    ¦               ¦           ¦                       
+    ¦               ¦           +---res
+    ¦               ¦               +---xml
+    ¦               ¦                       flutter_printing_file_paths.xml
+    ¦               ¦                       
+    ¦               +---example
+    ¦               ¦   ¦   pubspec.yaml
+    ¦               ¦   ¦   
+    ¦               ¦   +---lib
+    ¦               ¦           main.dart
+    ¦               ¦           
+    ¦               +---ios
+    ¦               ¦   ¦   printing.podspec
+    ¦               ¦   ¦   
+    ¦               ¦   +---Classes
+    ¦               ¦           CustomPrintPaper.swift
+    ¦               ¦           PrintingPlugin.m
+    ¦               ¦           PrintingPlugin.swift
+    ¦               ¦           PrintJob.swift
+    ¦               ¦           
+    ¦               +---lib
+    ¦               ¦   ¦   printing.dart
+    ¦               ¦   ¦   printing_web.dart
+    ¦               ¦   ¦   
+    ¦               ¦   +---src
+    ¦               ¦       ¦   asset_utils.dart
+    ¦               ¦       ¦   cache.dart
+    ¦               ¦       ¦   callback.dart
+    ¦               ¦       ¦   interface.dart
+    ¦               ¦       ¦   method_channel.dart
+    ¦               ¦       ¦   method_channel_ffi.dart
+    ¦               ¦       ¦   method_channel_js.dart
+    ¦               ¦       ¦   mutex.dart
+    ¦               ¦       ¦   output_type.dart
+    ¦               ¦       ¦   pdfjs.dart
+    ¦               ¦       ¦   printer.dart
+    ¦               ¦       ¦   printing.dart
+    ¦               ¦       ¦   printing_info.dart
+    ¦               ¦       ¦   print_job.dart
+    ¦               ¦       ¦   raster.dart
+    ¦               ¦       ¦   
+    ¦               ¦       +---fonts
+    ¦               ¦       ¦       font.dart
+    ¦               ¦       ¦       gfonts.dart
+    ¦               ¦       ¦       manifest.dart
+    ¦               ¦       ¦       
+    ¦               ¦       +---preview
+    ¦               ¦               actions.dart
+    ¦               ¦               action_bar_theme.dart
+    ¦               ¦               controller.dart
+    ¦               ¦               custom.dart
+    ¦               ¦               page.dart
+    ¦               ¦               pdf_preview.dart
+    ¦               ¦               raster.dart
+    ¦               ¦               
+    ¦               +---linux
+    ¦               ¦   ¦   CMakeLists.txt
+    ¦               ¦   ¦   printing_plugin.cc
+    ¦               ¦   ¦   print_job.cc
+    ¦               ¦   ¦   print_job.h
+    ¦               ¦   ¦   
+    ¦               ¦   +---include
+    ¦               ¦       +---printing
+    ¦               ¦               printing_plugin.h
+    ¦               ¦               
+    ¦               +---macos
+    ¦               ¦   ¦   printing.podspec
+    ¦               ¦   ¦   
+    ¦               ¦   +---Classes
+    ¦               ¦           PrintingPlugin.m
+    ¦               ¦           PrintingPlugin.swift
+    ¦               ¦           PrintJob.swift
+    ¦               ¦           
+    ¦               +---test
+    ¦               ¦       document_test.dart
+    ¦               ¦       info_test.dart
+    ¦               ¦       printing_test.dart
+    ¦               ¦       raster_test.dart
+    ¦               ¦       
+    ¦               +---windows
+    ¦                   ¦   CMakeLists.txt
+    ¦                   ¦   DownloadProject.cmake
+    ¦                   ¦   DownloadProject.CMakeLists.cmake.in
+    ¦                   ¦   printing.cpp
+    ¦                   ¦   printing.h
+    ¦                   ¦   printing_plugin.cpp
+    ¦                   ¦   print_job.cpp
+    ¦                   ¦   print_job.h
+    ¦                   ¦   
+    ¦                   +---include
+    ¦                       +---printing
+    ¦                               printing_plugin.h
+    ¦                               
+    +---runner
+        ¦   CMakeLists.txt
+        ¦   flutter_window.cpp
+        ¦   flutter_window.h
+        ¦   main.cpp
+        ¦   resource.h
+        ¦   runner.exe.manifest
+        ¦   Runner.rc
+        ¦   utils.cpp
+        ¦   utils.h
+        ¦   win32_window.cpp
+        ¦   win32_window.h
+        ¦   
+        +---resources
+                app_icon.ico
+                
