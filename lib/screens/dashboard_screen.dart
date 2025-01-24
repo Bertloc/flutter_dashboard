@@ -4,6 +4,14 @@ import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import '../widgets/compliance_pie_chart.dart';
 import '../widgets/DailyTrendLineChart.dart';
+import '../widgets/MonthlyProductAllocationBarChart.dart';
+import '../widgets/DistributionByCenterPieChart.dart';
+import '../widgets/DailySummaryLineChart.dart';
+import '../widgets/PendingOrdersBarChart.dart';
+import '../widgets/ProductCategorySummaryPieChart.dart';
+import '../widgets/DailyDeliveryReportLineChart.dart';
+import '../widgets/ReportDeliveryTrendsLineChart.dart';
+import '../widgets/DeliveryReportBarChart.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -18,12 +26,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
   String? selectedClientId;
   List<Map<String, dynamic>> complianceData = [];
   List<Map<String, dynamic>> dailyTrendData = [];
+  List<Map<String, dynamic>> monthlyProductData = [];
+  List<Map<String, dynamic>> distributionByCenterData = [];
+  List<Map<String, dynamic>> dailySummaryData = [];
+  List<Map<String, dynamic>> pendingOrdersData = [];
+  List<Map<String, dynamic>> productCategoryData = [];
+  List<Map<String, dynamic>> dailyDeliveryData = [];
+  List<Map<String, dynamic>> reportDeliveryTrendsData = [];
+  List<Map<String, dynamic>> deliveryReportData = [];
   bool isLoading = false;
   String? errorMessage;
 
-  final Dio dio = Dio();
-  final String baseUrl = "https://backend-processing.onrender.com/api";
+  final Dio dio = Dio(); // Cliente HTTP
+  final String baseUrl = "https://backend-processing.onrender.com/api"; // URL del backend en producción
 
+  // Selección de archivo
   Future<void> pickFile() async {
     try {
       final result = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['xlsx']);
@@ -37,6 +54,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     }
   }
 
+  // Subida del archivo y obtención de clientes
   Future<void> uploadFile() async {
     if (selectedFile == null) {
       setState(() => errorMessage = "Por favor, selecciona un archivo.");
@@ -49,22 +67,29 @@ class _DashboardScreenState extends State<DashboardScreen> {
       final formData = FormData.fromMap({"file": await MultipartFile.fromFile(selectedFile!.path)});
       final response = await dio.post("$baseUrl/upload", data: formData);
       final List<dynamic> responseClients = response.data["clientes"];
-
       if (responseClients.isEmpty) {
         setState(() => errorMessage = "No se encontraron clientes en el archivo.");
         return;
       }
-
       clients = List<Map<String, dynamic>>.from(responseClients);
-      clients.sort((a, b) => a["Nombre Solicitante"].toString().compareTo(b["Nombre Solicitante"].toString()));
+
+      // Ordenar clientes por nombre alfabéticamente
+      clients.sort((a, b) =>
+          a["Nombre Solicitante"].toString().compareTo(b["Nombre Solicitante"].toString()));
+
       errorMessage = null;
-    } catch (e) {
-      setState(() => errorMessage = "Error al cargar el archivo.");
+    } on DioError catch (e) {
+      if (e.response != null && e.response!.data["error"] != null) {
+        setState(() => errorMessage = e.response!.data["error"]);
+      } else {
+        setState(() => errorMessage = "Error al procesar el archivo.");
+      }
     } finally {
       setState(() => isLoading = false);
     }
   }
 
+  // Manejar selección de cliente y obtener datos de gráficos
   Future<void> handleClientSelect(String? clientId) async {
     if (clientId == null || selectedFile == null) return;
 
@@ -83,18 +108,52 @@ class _DashboardScreenState extends State<DashboardScreen> {
       final responses = await Future.wait([
         dio.post("$baseUrl/compliance-summary", data: formData),
         dio.post("$baseUrl/api/daily-trend", data: formData),
+        dio.post("$baseUrl/api/monthly-product-allocation", data: formData),
+        dio.post("$baseUrl/api/distribution-by-center", data: formData),
+        dio.post("$baseUrl/api/daily-summary", data: formData),
+        dio.post("$baseUrl/api/pending-orders", data: formData),
+        dio.post("$baseUrl/api/product-category-summary", data: formData),
+        dio.post("$baseUrl/api/daily-delivery-report", data: formData),
+        dio.post("$baseUrl/api/report-delivery-trends", data: formData),
+        dio.post("$baseUrl/api/delivery-report", data: formData),
       ]);
 
       complianceData = (responses[0].data as Map<String, dynamic>).entries
           .map((entry) => {"label": entry.key, "value": entry.value})
           .toList();
-
       dailyTrendData = (responses[1].data as List<dynamic>)
           .map((entry) => {"x": entry["Fecha Entrega"], "y": entry["Cantidad entrega"]})
           .toList();
-
-    } catch (e) {
-      setState(() => errorMessage = "Error al obtener los datos del cliente.");
+      monthlyProductData = (responses[2].data as List<dynamic>)
+          .map((entry) => {"Mes": entry["Mes"], "Cantidad": entry["Cantida Pedido"]})
+          .toList();
+      distributionByCenterData = (responses[3].data as List<dynamic>)
+          .map((entry) => {"label": entry["Centro"], "value": entry["Cantidad entrega"]})
+          .toList();
+      dailySummaryData = (responses[4].data as List<dynamic>)
+          .map((entry) => {"x": entry["Fecha Entrega"], "y": entry["% Aprovechamiento"]})
+          .toList();
+      pendingOrdersData = (responses[5].data as List<dynamic>)
+          .map((entry) => {"label": entry["Material"], "value": entry["Cantidad confirmada"]})
+          .toList();
+      productCategoryData = (responses[6].data as List<dynamic>)
+          .map((entry) => {"label": entry["Texto breve de material"], "value": entry["Cantida Pedido"]})
+          .toList();
+      dailyDeliveryData = (responses[7].data as List<dynamic>)
+          .map((entry) => {"x": entry["Fecha"], "y": entry["Total Entregado"]})
+          .toList();
+      reportDeliveryTrendsData = (responses[8].data as List<dynamic>)
+          .map((entry) => {"x": entry["Fecha Entrega"], "y": entry["Cantidad entrega"]})
+          .toList();
+      deliveryReportData = (responses[9].data as List<dynamic>)
+          .map((entry) => {"label": entry["Material"], "value": entry["Cantidad entrega"]})
+          .toList();
+    } on DioError catch (e) {
+      if (e.response != null && e.response!.data["error"] != null) {
+        setState(() => errorMessage = e.response!.data["error"]);
+      } else {
+        setState(() => errorMessage = "Error al obtener datos del cliente.");
+      }
     } finally {
       setState(() => isLoading = false);
     }
@@ -140,6 +199,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
               const SizedBox(height: 16),
               CompliancePieChart(data: complianceData),
               DailyTrendLineChart(data: dailyTrendData),
+              MonthlyProductAllocationBarChart(data: monthlyProductData),
+              DistributionByCenterPieChart(data: distributionByCenterData),
+              DailySummaryLineChart(data: dailySummaryData),
+              PendingOrdersBarChart(data: pendingOrdersData),
+              ProductCategorySummaryPieChart(data: productCategoryData),
+              DailyDeliveryReportLineChart(data: dailyDeliveryData),
+              ReportDeliveryTrendsLineChart(data: reportDeliveryTrendsData),
+              DeliveryReportBarChart(data: deliveryReportData),
             ],
           ],
         ),
