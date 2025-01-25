@@ -8,99 +8,70 @@ class DailySummaryLineChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Verificar si los datos están vacíos
     if (data.isEmpty) {
-      return const Center(child: Text("No hay datos para mostrar"));
+      return const Center(
+        child: Text(
+          "No hay datos para mostrar",
+          style: TextStyle(color: Colors.grey, fontSize: 16),
+        ),
+      );
     }
 
-    // Convertir datos para el gráfico
-    List<FlSpot> spots = data
-        .map((entry) => FlSpot(
-              DateTime.parse(entry['Fecha Entrega']).millisecondsSinceEpoch.toDouble(),
-              entry['% Aprovechamiento']?.toDouble() ?? 0.0,
-            ))
-        .toList();
+    // Convertir los datos a FlSpot con validación de fechas y valores
+    final spots = data
+        .where((entry) =>
+            entry['x'] != null &&
+            entry['y'] != null &&
+            DateTime.tryParse(entry['x']) != null) // Validar formato de fecha
+        .map((entry) {
+      final x = DateTime.parse(entry['x']).millisecondsSinceEpoch.toDouble();
+      final y = (entry['y'] as num?)?.toDouble() ?? 0.0;
+      return FlSpot(x, y.isFinite ? y : 0.0); // Evitar valores NaN o infinitos
+    }).toList();
 
-    // Obtener los rangos del eje X para mostrar las fechas correctamente
-    final DateTime startDate =
-        DateTime.fromMillisecondsSinceEpoch(spots.first.x.toInt());
-    final DateTime endDate =
-        DateTime.fromMillisecondsSinceEpoch(spots.last.x.toInt());
+    if (spots.isEmpty) {
+      return const Center(
+        child: Text(
+          "No se generaron puntos válidos para la gráfica",
+          style: TextStyle(color: Colors.grey, fontSize: 16),
+        ),
+      );
+    }
 
-    return Card(
-      margin: const EdgeInsets.all(8.0),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              "Resumen Diario",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+    // Construir el gráfico
+    return LineChart(
+      LineChartData(
+        lineBarsData: [
+          LineChartBarData(
+            spots: spots,
+            isCurved: true,
+            color: Colors.blue,
+            belowBarData: BarAreaData(show: false),
+          ),
+        ],
+        titlesData: FlTitlesData(
+          leftTitles: AxisTitles(
+            sideTitles: SideTitles(showTitles: true),
+          ),
+          bottomTitles: AxisTitles(
+            sideTitles: SideTitles(
+              showTitles: true,
+              reservedSize: 22,
+              getTitlesWidget: (value, meta) {
+                try {
+                  final date =
+                      DateTime.fromMillisecondsSinceEpoch(value.toInt());
+                  return Text(
+                    "${date.day}/${date.month}",
+                    style: const TextStyle(fontSize: 10),
+                  );
+                } catch (e) {
+                  return const Text("", style: TextStyle(fontSize: 10));
+                }
+              },
             ),
-            const SizedBox(height: 16),
-            SizedBox(
-              height: 300,
-              child: LineChart(
-                LineChartData(
-                  lineBarsData: [
-                    LineChartBarData(
-                      spots: spots,
-                      isCurved: true,
-                      gradient: LinearGradient(
-                        colors: [Colors.green, Colors.greenAccent],
-                      ),
-                      barWidth: 4,
-                      isStrokeCapRound: true,
-                      belowBarData: BarAreaData(
-                        show: true,
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.green.withOpacity(0.3),
-                            Colors.greenAccent.withOpacity(0.3),
-                          ],
-                        ),
-                      ),
-                      dotData: FlDotData(show: true),
-                    ),
-                  ],
-                  titlesData: FlTitlesData(
-                    bottomTitles: AxisTitles(
-                      sideTitles: SideTitles(
-                        showTitles: true,
-                        reservedSize: 30,
-                        interval: (spots.last.x - spots.first.x) / 5,
-                        getTitlesWidget: (value, meta) {
-                          final date =
-                              DateTime.fromMillisecondsSinceEpoch(value.toInt());
-                          return Text(
-                            "${date.day}/${date.month}",
-                            style: const TextStyle(fontSize: 12),
-                          );
-                        },
-                      ),
-                    ),
-                    leftTitles: AxisTitles(
-                      sideTitles: SideTitles(
-                        showTitles: true,
-                        reservedSize: 40,
-                        getTitlesWidget: (value, meta) => Text(
-                          "${value.toStringAsFixed(1)}%",
-                          style: const TextStyle(fontSize: 12),
-                        ),
-                      ),
-                    ),
-                  ),
-                  gridData: FlGridData(show: true),
-                  borderData: FlBorderData(
-                    show: true,
-                    border: const Border.symmetric(
-                      horizontal: BorderSide(color: Colors.black26),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

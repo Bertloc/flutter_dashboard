@@ -58,23 +58,29 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   // Subida del archivo y obtención de clientes
   Future<void> uploadFile() async {
-    if (selectedFile == null) {
-      setState(() => errorMessage = "Por favor, selecciona un archivo.");
+    if (selectedFile == null || selectedFile!.path.isEmpty) {
+      setState(() => errorMessage = "Por favor, selecciona un archivo válido.");
       return;
     }
 
     setState(() => isLoading = true);
 
     try {
-      final formData = FormData.fromMap(
-          {"file": await MultipartFile.fromFile(selectedFile!.path)});
+      final formData = FormData.fromMap({
+        "file": await MultipartFile.fromFile(selectedFile!.path),
+      });
+
       final response = await dio.post("$baseUrl/upload", data: formData);
-      final List<dynamic> responseClients = response.data["clientes"];
-      if (responseClients.isEmpty) {
-        setState(
-            () => errorMessage = "No se encontraron clientes en el archivo.");
+
+      // Verifica que la respuesta tenga datos
+      if (response.data == null || response.data["clientes"] == null) {
+        setState(() {
+          errorMessage = "No se encontraron clientes en el archivo.";
+        });
         return;
       }
+
+      final List<dynamic> responseClients = response.data["clientes"];
       clients = List<Map<String, dynamic>>.from(responseClients);
 
       // Ordenar clientes por nombre alfabéticamente
@@ -84,16 +90,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
       errorMessage = null;
     } on DioError catch (e) {
-      if (e.response != null && e.response!.data["error"] != null) {
-        setState(() => errorMessage = e.response!.data["error"]);
-      } else {
-        setState(() => errorMessage = "Error al procesar el archivo.");
-      }
+      setState(() {
+        errorMessage =
+            e.response?.data["error"] ?? "Error al procesar el archivo.";
+      });
+    } catch (e) {
+      setState(() {
+        errorMessage = "Error inesperado: $e";
+      });
     } finally {
       setState(() => isLoading = false);
     }
   }
 
+  // Manejar selección de cliente y obtener datos de gráficos
   // Manejar selección de cliente y obtener datos de gráficos
   Future<void> handleClientSelect(String? clientId) async {
     if (clientId == null || selectedFile == null) return;
@@ -105,99 +115,138 @@ class _DashboardScreenState extends State<DashboardScreen> {
     });
 
     try {
-      final formData = FormData.fromMap({
-        "file": await MultipartFile.fromFile(selectedFile!.path),
-        "client_id": clientId,
-      });
+      // Enviar todas las solicitudes concurrentemente, creando un FormData único para cada una
+      final responses = await Future.wait([
+        dio.post(
+          "$baseUrl/compliance-summary",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/daily-trend",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/monthly-product-allocation",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/distribution-by-center",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/daily-summary",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/pending-orders",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/product-category-summary",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/daily-delivery-report",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/report-delivery-trends",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+        dio.post(
+          "$baseUrl/api/delivery-report",
+          data: FormData.fromMap({
+            "file": await MultipartFile.fromFile(selectedFile!.path),
+            "client_id": clientId,
+          }),
+        ),
+      ]);
 
-      // Solicitud 1: Compliance Summary
-      final complianceResponse =
-          await dio.post("$baseUrl/compliance-summary", data: formData);
-      complianceData = (complianceResponse.data as Map<String, dynamic>)
+      // Procesar las respuestas
+      complianceData = (responses[0].data as Map<String, dynamic>)
           .entries
           .map((entry) => {"label": entry.key, "value": entry.value})
           .toList();
 
-      // Solicitud 2: Daily Trend
-      final dailyTrendResponse =
-          await dio.post("$baseUrl/api/daily-trend", data: formData);
-      dailyTrendData = (dailyTrendResponse.data as List<dynamic>)
+      dailyTrendData = (responses[1].data as List<dynamic>)
           .map((entry) =>
               {"x": entry["Fecha Entrega"], "y": entry["Cantidad entrega"]})
           .toList();
 
-      // Solicitud 3: Monthly Product Allocation
-      final monthlyProductResponse = await dio
-          .post("$baseUrl/api/monthly-product-allocation", data: formData);
-      monthlyProductData = (monthlyProductResponse.data as List<dynamic>)
+      monthlyProductData = (responses[2].data as List<dynamic>)
           .map((entry) =>
               {"Mes": entry["Mes"], "Cantidad": entry["Cantida Pedido"]})
           .toList();
 
-      // Solicitud 4: Distribution by Center
-      final distributionResponse =
-          await dio.post("$baseUrl/api/distribution-by-center", data: formData);
-      distributionByCenterData = (distributionResponse.data as List<dynamic>)
+      distributionByCenterData = (responses[3].data as List<dynamic>)
           .map((entry) =>
               {"label": entry["Centro"], "value": entry["Cantidad entrega"]})
           .toList();
 
-      // Solicitud 5: Daily Summary
-      final dailySummaryResponse =
-          await dio.post("$baseUrl/api/daily-summary", data: formData);
-      dailySummaryData = (dailySummaryResponse.data as List<dynamic>)
+      dailySummaryData = (responses[4].data as List<dynamic>)
           .map((entry) =>
               {"x": entry["Fecha Entrega"], "y": entry["% Aprovechamiento"]})
           .toList();
 
-      // Solicitud 6: Pending Orders
-      final pendingOrdersResponse =
-          await dio.post("$baseUrl/api/pending-orders", data: formData);
-      pendingOrdersData = (pendingOrdersResponse.data as List<dynamic>)
+      pendingOrdersData = (responses[5].data as List<dynamic>)
           .map((entry) => {
                 "label": entry["Material"],
                 "value": entry["Cantidad confirmada"]
               })
           .toList();
 
-      // Solicitud 7: Product Category Summary
-      final productCategoryResponse = await dio
-          .post("$baseUrl/api/product-category-summary", data: formData);
-      productCategoryData = (productCategoryResponse.data as List<dynamic>)
+      productCategoryData = (responses[6].data as List<dynamic>)
           .map((entry) => {
                 "label": entry["Texto breve de material"],
                 "value": entry["Cantida Pedido"]
               })
           .toList();
 
-      // Solicitud 8: Daily Delivery Report
-      final dailyDeliveryResponse =
-          await dio.post("$baseUrl/api/daily-delivery-report", data: formData);
-      dailyDeliveryData = (dailyDeliveryResponse.data as List<dynamic>)
+      dailyDeliveryData = (responses[7].data as List<dynamic>)
           .map((entry) => {"x": entry["Fecha"], "y": entry["Total Entregado"]})
           .toList();
 
-      // Solicitud 9: Report Delivery Trends
-      final reportTrendsResponse =
-          await dio.post("$baseUrl/api/report-delivery-trends", data: formData);
-      reportDeliveryTrendsData = (reportTrendsResponse.data as List<dynamic>)
+      reportDeliveryTrendsData = (responses[8].data as List<dynamic>)
           .map((entry) =>
               {"x": entry["Fecha Entrega"], "y": entry["Cantidad entrega"]})
           .toList();
 
-      // Solicitud 10: Delivery Report
-      final deliveryReportResponse =
-          await dio.post("$baseUrl/api/delivery-report", data: formData);
-      deliveryReportData = (deliveryReportResponse.data as List<dynamic>)
+      deliveryReportData = (responses[9].data as List<dynamic>)
           .map((entry) =>
               {"label": entry["Material"], "value": entry["Cantidad entrega"]})
           .toList();
     } on DioError catch (e) {
-      if (e.response != null && e.response!.data["error"] != null) {
-        setState(() => errorMessage = e.response!.data["error"]);
-      } else {
-        setState(() => errorMessage = "Error al obtener datos del cliente.");
-      }
+      print("Error al obtener datos del cliente: $e");
+      setState(() {
+        errorMessage = e.response?.data["error"] ?? "Error desconocido.";
+      });
     } finally {
       setState(() => isLoading = false);
     }
@@ -223,11 +272,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   onPressed: uploadFile,
                   child: const Text("Subir Archivo"),
                 ),
-              if (isLoading) const CircularProgressIndicator(),
+              const SizedBox(height: 16),
+              if (isLoading) const Center(child: CircularProgressIndicator()),
               if (errorMessage != null)
-                Text(
-                  errorMessage!,
-                  style: const TextStyle(color: Colors.red),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Text(
+                    errorMessage!,
+                    style: const TextStyle(color: Colors.red),
+                    textAlign: TextAlign.center,
+                  ),
                 ),
               if (clients.isNotEmpty)
                 DropdownButton<String>(

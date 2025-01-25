@@ -9,22 +9,45 @@ class DailyTrendLineChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (data.isEmpty) {
-      return const Center(child: Text("No hay datos para mostrar"));
+      print("DailyTrendLineChart: No hay datos para mostrar");
+      return const Center(
+        child: Text(
+          "No hay datos para mostrar",
+          style: TextStyle(fontSize: 16, color: Colors.grey),
+        ),
+      );
     }
+
+    // Depurar datos recibidos
+    print("DailyTrendLineChart Data: $data");
 
     // Convertir datos para el gráfico
     List<FlSpot> spots = data
+        .where((entry) =>
+            entry['x'] != null &&
+            entry['y'] != null &&
+            DateTime.tryParse(entry['x']) !=
+                null) // Asegura que la fecha sea válida
         .map((entry) => FlSpot(
               DateTime.parse(entry['x']).millisecondsSinceEpoch.toDouble(),
               entry['y']?.toDouble() ?? 0.0,
             ))
         .toList();
 
-    // Obtener los rangos del eje X para mostrar las fechas correctamente
-    final DateTime startDate =
-        DateTime.fromMillisecondsSinceEpoch(spots.first.x.toInt());
-    final DateTime endDate =
-        DateTime.fromMillisecondsSinceEpoch(spots.last.x.toInt());
+    if (spots.isEmpty) {
+      print("DailyTrendLineChart: No se generaron puntos válidos");
+      return const Center(
+        child: Text(
+          "No hay datos para mostrar",
+          style: TextStyle(fontSize: 16, color: Colors.grey),
+        ),
+      );
+    }
+
+    // Rango del eje X
+    final minX = spots.first.x;
+    final maxX = spots.last.x;
+    final interval = (maxX - minX) / (spots.length > 1 ? spots.length - 1 : 1);
 
     return Card(
       margin: const EdgeInsets.all(8.0),
@@ -42,11 +65,13 @@ class DailyTrendLineChart extends StatelessWidget {
               height: 300,
               child: LineChart(
                 LineChartData(
+                  minX: minX,
+                  maxX: maxX,
                   lineBarsData: [
                     LineChartBarData(
                       spots: spots,
                       isCurved: true,
-                      color: Colors.blue, // Corrección del parámetro
+                      color: Colors.blue,
                       barWidth: 4,
                       isStrokeCapRound: true,
                       belowBarData: BarAreaData(
@@ -66,10 +91,10 @@ class DailyTrendLineChart extends StatelessWidget {
                       sideTitles: SideTitles(
                         showTitles: true,
                         reservedSize: 30,
-                        interval: (spots.last.x - spots.first.x) / 5,
+                        interval: interval,
                         getTitlesWidget: (value, meta) {
-                          final date =
-                              DateTime.fromMillisecondsSinceEpoch(value.toInt());
+                          final date = DateTime.fromMillisecondsSinceEpoch(
+                              value.toInt());
                           return Text(
                             "${date.day}/${date.month}",
                             style: const TextStyle(fontSize: 12),
