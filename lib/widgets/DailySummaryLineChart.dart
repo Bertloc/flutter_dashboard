@@ -18,18 +18,22 @@ class DailySummaryLineChart extends StatelessWidget {
       );
     }
 
-    // Convertir los datos a FlSpot con validación de fechas y valores
+    // Convertir los datos a FlSpot con validación robusta
     final spots = data
         .where((entry) =>
             entry['x'] != null &&
             entry['y'] != null &&
-            DateTime.tryParse(entry['x']) != null) // Validar formato de fecha
-        .map((entry) {
-      final x = DateTime.parse(entry['x']).millisecondsSinceEpoch.toDouble();
-      final y = (entry['y'] as num?)?.toDouble() ?? 0.0;
-      return FlSpot(x, y.isFinite ? y : 0.0); // Evitar valores NaN o infinitos
-    }).toList();
+            entry['x'] is String &&
+            entry['y'] is num &&
+            DateTime.tryParse(entry['x']) != null &&
+            (entry['y'] as num).isFinite) // Filtrar NaN e Infinity
+        .map((entry) => FlSpot(
+              DateTime.parse(entry['x']).millisecondsSinceEpoch.toDouble(),
+              (entry['y'] as num).toDouble(),
+            ))
+        .toList();
 
+    // Manejar caso donde no hay puntos válidos
     if (spots.isEmpty) {
       return const Center(
         child: Text(
@@ -40,36 +44,39 @@ class DailySummaryLineChart extends StatelessWidget {
     }
 
     // Construir el gráfico
-    return LineChart(
-      LineChartData(
-        lineBarsData: [
-          LineChartBarData(
-            spots: spots,
-            isCurved: true,
-            color: Colors.blue,
-            belowBarData: BarAreaData(show: false),
-          ),
-        ],
-        titlesData: FlTitlesData(
-          leftTitles: AxisTitles(
-            sideTitles: SideTitles(showTitles: true),
-          ),
-          bottomTitles: AxisTitles(
-            sideTitles: SideTitles(
-              showTitles: true,
-              reservedSize: 22,
-              getTitlesWidget: (value, meta) {
-                try {
-                  final date =
-                      DateTime.fromMillisecondsSinceEpoch(value.toInt());
-                  return Text(
-                    "${date.day}/${date.month}",
-                    style: const TextStyle(fontSize: 10),
-                  );
-                } catch (e) {
-                  return const Text("", style: TextStyle(fontSize: 10));
-                }
-              },
+    return SizedBox(
+      height: 300, // Define un tamaño fijo
+      child: LineChart(
+        LineChartData(
+          lineBarsData: [
+            LineChartBarData(
+              spots: spots,
+              isCurved: true,
+              color: Colors.blue,
+              belowBarData: BarAreaData(show: false),
+            ),
+          ],
+          titlesData: FlTitlesData(
+            leftTitles: AxisTitles(
+              sideTitles: SideTitles(showTitles: true),
+            ),
+            bottomTitles: AxisTitles(
+              sideTitles: SideTitles(
+                showTitles: true,
+                reservedSize: 22,
+                getTitlesWidget: (value, meta) {
+                  try {
+                    final date =
+                        DateTime.fromMillisecondsSinceEpoch(value.toInt());
+                    return Text(
+                      "${date.day}/${date.month}",
+                      style: const TextStyle(fontSize: 10),
+                    );
+                  } catch (e) {
+                    return const Text('');
+                  }
+                },
+              ),
             ),
           ),
         ),
