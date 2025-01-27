@@ -4,7 +4,8 @@ import 'package:fl_chart/fl_chart.dart';
 class DailyDeliveryReportLineChart extends StatelessWidget {
   final List<Map<String, dynamic>> data;
 
-  const DailyDeliveryReportLineChart({Key? key, required this.data}) : super(key: key);
+  const DailyDeliveryReportLineChart({Key? key, required this.data})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,19 +13,33 @@ class DailyDeliveryReportLineChart extends StatelessWidget {
       return const Center(child: Text("No hay datos para mostrar"));
     }
 
-    // Convertir datos para el gráfico
-    List<FlSpot> spots = data
-        .map((entry) => FlSpot(
-              DateTime.parse(entry['Fecha']).millisecondsSinceEpoch.toDouble(),
-              entry['Total Entregado']?.toDouble() ?? 0.0,
-            ))
-        .toList();
+    // Crear un mapa de fechas a índices
+    final dateMap = <String, int>{};
+    int currentIndex = 0;
+    for (var entry in data) {
+      final date = entry['Fecha'];
+      if (date != null && !dateMap.containsKey(date)) {
+        dateMap[date] = currentIndex++;
+      }
+    }
 
-    // Obtener los rangos del eje X para mostrar las fechas correctamente
-    final DateTime startDate =
-        DateTime.fromMillisecondsSinceEpoch(spots.first.x.toInt());
-    final DateTime endDate =
-        DateTime.fromMillisecondsSinceEpoch(spots.last.x.toInt());
+    // Generar los puntos (spots) para el gráfico
+    List<FlSpot> spots = [];
+    for (var entry in data) {
+      try {
+        if (entry['Fecha'] != null && entry['Total Entregado'] != null) {
+          final x = dateMap[entry['Fecha']]!.toDouble(); // Índice de la fecha
+          final y = (entry['Total Entregado'] as num).toDouble();
+          spots.add(FlSpot(x, y));
+        }
+      } catch (e) {
+        debugPrint("Error procesando entrada: $entry, Error: $e");
+      }
+    }
+
+    if (spots.isEmpty) {
+      return const Center(child: Text("No hay datos válidos para mostrar"));
+    }
 
     return Card(
       margin: const EdgeInsets.all(8.0),
@@ -46,7 +61,7 @@ class DailyDeliveryReportLineChart extends StatelessWidget {
                     LineChartBarData(
                       spots: spots,
                       isCurved: true,
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         colors: [Colors.blue, Colors.blueAccent],
                       ),
                       barWidth: 4,
@@ -68,13 +83,15 @@ class DailyDeliveryReportLineChart extends StatelessWidget {
                       sideTitles: SideTitles(
                         showTitles: true,
                         reservedSize: 30,
-                        interval: (spots.last.x - spots.first.x) / 5,
                         getTitlesWidget: (value, meta) {
-                          final date =
-                              DateTime.fromMillisecondsSinceEpoch(value.toInt());
+                          // Obtener la fecha correspondiente al índice
+                          final date = dateMap.entries
+                              .firstWhere((element) =>
+                                  element.value.toDouble() == value)
+                              .key;
                           return Text(
-                            "${date.day}/${date.month}",
-                            style: const TextStyle(fontSize: 12),
+                            date, // Mostrar la fecha como etiqueta
+                            style: const TextStyle(fontSize: 10),
                           );
                         },
                       ),

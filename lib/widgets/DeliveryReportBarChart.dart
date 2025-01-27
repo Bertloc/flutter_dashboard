@@ -4,7 +4,8 @@ import 'package:fl_chart/fl_chart.dart';
 class DeliveryReportBarChart extends StatelessWidget {
   final List<Map<String, dynamic>> data;
 
-  const DeliveryReportBarChart({Key? key, required this.data}) : super(key: key);
+  const DeliveryReportBarChart({Key? key, required this.data})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,15 @@ class DeliveryReportBarChart extends StatelessWidget {
       return const Center(child: Text("No hay datos para mostrar"));
     }
 
-    // Preparar los datos agrupados para las barras apiladas
+    // Agrupar datos por fecha y preparar para las barras apiladas
     final groupedData = _groupDataByDate(data);
+
+    if (groupedData.isEmpty) {
+      return const Center(child: Text("No hay datos válidos para mostrar"));
+    }
+
+    // Crear el índice para las fechas ordenadas
+    final sortedDates = groupedData.keys.toList()..sort();
 
     return Card(
       margin: const EdgeInsets.all(8.0),
@@ -31,8 +39,8 @@ class DeliveryReportBarChart extends StatelessWidget {
               height: 300,
               child: BarChart(
                 BarChartData(
-                  barGroups: groupedData.keys.map((date) {
-                    final index = groupedData.keys.toList().indexOf(date);
+                  barGroups: sortedDates.map((date) {
+                    final index = sortedDates.indexOf(date);
                     return BarChartGroupData(
                       x: index,
                       barRods: groupedData[date]!
@@ -50,12 +58,14 @@ class DeliveryReportBarChart extends StatelessWidget {
                         showTitles: true,
                         getTitlesWidget: (value, meta) {
                           final dateIndex = value.toInt();
-                          if (dateIndex < 0 || dateIndex >= groupedData.keys.length) {
+                          if (dateIndex < 0 ||
+                              dateIndex >= sortedDates.length) {
                             return const SizedBox.shrink();
                           }
-                          final date = groupedData.keys.toList()[dateIndex];
+                          final date = sortedDates[dateIndex];
+                          final parsedDate = DateTime.parse(date);
                           return Text(
-                            date,
+                            "${parsedDate.day}/${parsedDate.month}",
                             style: const TextStyle(fontSize: 10),
                             overflow: TextOverflow.ellipsis,
                           );
@@ -110,23 +120,33 @@ class DeliveryReportBarChart extends StatelessWidget {
   }
 
   // Función para agrupar datos por fecha
-  Map<String, List<Map<String, dynamic>>> _groupDataByDate(List<Map<String, dynamic>> data) {
+  Map<String, List<Map<String, dynamic>>> _groupDataByDate(
+      List<Map<String, dynamic>> data) {
     final Map<String, List<Map<String, dynamic>>> groupedData = {};
     for (final entry in data) {
-      final date = entry['Fecha Entrega'] as String;
-      final label = entry['Material'] as String;
-      final value = (entry['Cantidad entrega'] as num).toDouble();
-      if (!groupedData.containsKey(date)) {
-        groupedData[date] = [];
+      final date = entry['Fecha Entrega'] as String?;
+      final label = entry['Material']?.toString(); // Convertir a String
+      final value = (entry['Cantidad entrega'] as num?)?.toDouble();
+
+      // Validar que los datos no sean nulos antes de procesarlos
+      if (date != null && label != null && value != null) {
+        if (!groupedData.containsKey(date)) {
+          groupedData[date] = [];
+        }
+        groupedData[date]!.add({'label': label, 'value': value});
       }
-      groupedData[date]!.add({'label': label, 'value': value});
     }
     return groupedData;
   }
 
   // Obtener etiquetas únicas
   List<String> _getUniqueLabels(List<Map<String, dynamic>> data) {
-    return data.map((entry) => entry['Material'] as String).toSet().toList();
+    return data
+        .map((entry) => entry['Material']?.toString())
+        .where((label) => label != null)
+        .cast<String>()
+        .toSet()
+        .toList();
   }
 
   // Asignar colores a las etiquetas
@@ -138,6 +158,8 @@ class DeliveryReportBarChart extends StatelessWidget {
       Colors.red,
       Colors.purple,
       Colors.teal,
+      Colors.pink,
+      Colors.yellow,
     ];
     return colors[label.hashCode % colors.length];
   }
