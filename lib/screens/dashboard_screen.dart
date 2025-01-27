@@ -9,9 +9,6 @@ import '../widgets/DistributionByCenterPieChart.dart';
 import '../widgets/DailySummaryLineChart.dart';
 import '../widgets/PendingOrdersBarChart.dart';
 import '../widgets/ProductCategorySummaryPieChart.dart';
-import '../widgets/DailyDeliveryReportLineChart.dart';
-import '../widgets/ReportDeliveryTrendsLineChart.dart';
-import '../widgets/DeliveryReportBarChart.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -166,27 +163,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
             "client_id": clientId,
           }),
         ),
-        dio.post(
-          "$baseUrl/api/daily-delivery-report",
-          data: FormData.fromMap({
-            "file": await MultipartFile.fromFile(selectedFile!.path),
-            "client_id": clientId,
-          }),
-        ),
-        dio.post(
-          "$baseUrl/api/report-delivery-trends",
-          data: FormData.fromMap({
-            "file": await MultipartFile.fromFile(selectedFile!.path),
-            "client_id": clientId,
-          }),
-        ),
-        dio.post(
-          "$baseUrl/api/delivery-report",
-          data: FormData.fromMap({
-            "file": await MultipartFile.fromFile(selectedFile!.path),
-            "client_id": clientId,
-          }),
-        ),
       ]);
 
       // Procesar las respuestas
@@ -310,12 +286,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 PendingOrdersBarChart(data: pendingOrdersData),
                 const SizedBox(height: 16),
                 ProductCategorySummaryPieChart(data: productCategoryData),
-                const SizedBox(height: 16),
-                DailyDeliveryReportLineChart(data: dailyDeliveryData),
-                const SizedBox(height: 16),
-                ReportDeliveryTrendsLineChart(data: reportDeliveryTrendsData),
-                const SizedBox(height: 16),
-                DeliveryReportBarChart(data: deliveryReportData),
               ],
             ],
           ),
